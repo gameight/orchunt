@@ -1,4 +1,4 @@
-##Orchunt
+Orchunt
 
 The project is a mobile game which tests your skills in various ways. Type of game action, platfrom and the game is 2D.The game will consist of levels.
 
@@ -6,7 +6,6 @@ We have a character that called Rina. Game story begins with the kidnapping of R
 
 Project Web Site
 https://gameight.github.io/
-
 
 Game Design Document
 https://docs.google.com/document/d/1dXyIRu75k97GCcxBKQA96DuOU0gtmip8GeRj4sUvzV4/edit?usp=sharing
