@@ -74,3 +74,12 @@ TagManager:
   - name: Object9
     uniqueID: 2923182371
     locked: 0
+  - name: Stone
+    uniqueID: 2189094799
+    locked: 0
+  - name: Parchment
+    uniqueID: 628056223
+    locked: 0
+  - name: Others
+    uniqueID: 3766428467
+    locked: 0
