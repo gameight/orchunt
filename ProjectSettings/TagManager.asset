@@ -41,3 +41,36 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: BackGround
+    uniqueID: 2261890381
+    locked: 0
+  - name: Ground
+    uniqueID: 2189700999
+    locked: 0
+  - name: Object
+    uniqueID: 2513635041
+    locked: 0
+  - name: Object2
+    uniqueID: 3867291705
+    locked: 0
+  - name: Object3
+    uniqueID: 2126594019
+    locked: 0
+  - name: Object4
+    uniqueID: 533525323
+    locked: 0
+  - name: Object5
+    uniqueID: 3269623937
+    locked: 0
+  - name: Object6
+    uniqueID: 3438943381
+    locked: 0
+  - name: Object7
+    uniqueID: 1267715807
+    locked: 0
+  - name: Object8
+    uniqueID: 2056758737
+    locked: 0
+  - name: Object9
+    uniqueID: 2923182371
+    locked: 0
