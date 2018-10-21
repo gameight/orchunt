@@ -55,6 +55,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\CharacterController2D.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\StartScreenController.cs" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>/Users/ozgukaya/Documents/GitHub/orchunt/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
