@@ -83,3 +83,6 @@ TagManager:
   - name: Others
     uniqueID: 3766428467
     locked: 0
+  - name: Logo
+    uniqueID: 494726527
+    locked: 0
