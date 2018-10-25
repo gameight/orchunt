@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 50281966820001688}
   - component: {fileID: 114750542758943626}
   - component: {fileID: 114714719226669924}
+  - component: {fileID: 95351698443528568}
   m_Layer: 8
   m_Name: Rina
   m_TagString: Untagged
@@ -67,7 +68,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1932470726195884}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.95, y: 3.06, z: 0}
+  m_LocalPosition: {x: -2.63, y: 2.88, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4377892601645104}
@@ -134,6 +135,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.6643305, y: 1.981369}
   m_EdgeRadius: 0
+--- !u!95 &95351698443528568
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1932470726195884}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3a3cefda657585f4d839b5e6df586857, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114714719226669924
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -179,6 +198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 114714719226669924}
+  animator: {fileID: 95351698443528568}
   runSpeed: 40
 --- !u!212 &212609081337790192
 SpriteRenderer:
