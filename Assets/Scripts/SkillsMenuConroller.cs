@@ -2,8 +2,10 @@
 
 public class SkillsMenuConroller : MonoBehaviour {
 
-	// Update is called once per frame
-	void Update () {
+    public Animator animator;
+
+    // Update is called once per frame
+    void Update () {
         		
 	}
 
@@ -11,6 +13,19 @@ public class SkillsMenuConroller : MonoBehaviour {
     
     public void OnButtonClick()
     {
+
+        bool isSkillsMenuOpen = animator.GetBool("isOpen");
+
+        Debug.Log("OnButtonClick has been called.");
         SkillsMenu.SetActive(true);
+
+        if (isSkillsMenuOpen == false) { 
+        animator.SetBool("isOpen", true);
+        } else
+        {
+            animator.SetBool("isOpen", false);
+        }
+
+
     }
 }
