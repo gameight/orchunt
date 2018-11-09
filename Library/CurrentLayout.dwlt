@@ -69,7 +69,7 @@ MonoBehaviour:
   m_MinSize: {x: 681, y: 492}
   m_MaxSize: {x: 12006, y: 14042}
   vertical: 0
-  controlID: 67
+  controlID: 96
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -209,7 +209,7 @@ MonoBehaviour:
   m_MinSize: {x: 681, y: 492}
   m_MaxSize: {x: 12006, y: 14042}
   vertical: 1
-  controlID: 68
+  controlID: 97
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -234,7 +234,7 @@ MonoBehaviour:
   m_MinSize: {x: 681, y: 221}
   m_MaxSize: {x: 12006, y: 4021}
   vertical: 0
-  controlID: 69
+  controlID: 98
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -293,7 +293,7 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_PreviewResizer:
-    m_CachedPref: 106
+    m_CachedPref: -106
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
@@ -464,20 +464,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Environments/LavaFields/Parts/decorations
+    - Assets/Scenes
   m_ViewMode: 1
   m_StartGridSize: 75
   m_LastFolders:
-  - Assets/Environments/LavaFields/Parts/decorations
+  - Assets/Scenes
   m_LastFoldersGridSize: 75
   m_LastProjectPath: "C:\\Users\\Nuri Ak\u0131n\\Documents\\GitHub\\orchunt"
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 331}
-    m_SelectedIDs: 883e0000
-    m_LastClickedID: 16008
-    m_ExpandedIDs: 00000000f635000020360000d437000080380000ac3900000a3a0000c03b00006a3e0000cc3f0000ec400000004200003c4300005243000000ca9a3b
+    m_SelectedIDs: ae2c0000
+    m_LastClickedID: 11438
+    m_ExpandedIDs: 00000000a42b0000ce2b0000822d00002e2e00005a2f0000ba2f0000703100001a3400007c3500009c360000b0370000ee3800000439000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -505,7 +505,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000f635000020360000d437000080380000ac3900000a3a0000c03b00006a3e0000cc3f0000ec400000004200003c43000052430000
+    m_ExpandedIDs: 00000000a42b0000ce2b0000822d00002e2e00005a2f0000ba2f0000703100001a3400007c3500009c360000b0370000ee38000004390000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -557,7 +557,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 120}
+    m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 75
   m_DirectoriesAreaWidth: 182
 --- !u!114 &17
@@ -587,23 +587,23 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
-    m_LastClickedID: 0
-    m_ExpandedIDs: 2cefffff60faffff00000000
+    m_SelectedIDs: d6550000
+    m_LastClickedID: 21974
+    m_ExpandedIDs: 14b3fdff20b3fdff32b3fdffe2bcfdffecbcfdff18bdfdff36d7fdffd2d9fdff6aedfdffbceffdff86f1fdfff2f2fdfff8f6fdff24f8fdfff8fcfdff5cfefdff3001feffe2fbffff000000004a3d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: CameraHolder
+      m_OriginalName: CameraHolder
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: -150752
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 4}
     m_SearchString: 
@@ -644,9 +644,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 6.5701704, y: -0.86059165, z: 0.13354371}
+    m_Target: {x: 6.239209, y: 3.0381143, z: -0.08714584}
     speed: 2
-    m_Value: {x: 6.5701704, y: -0.86059165, z: 0.13354371}
+    m_Value: {x: 6.239209, y: 3.0381143, z: -0.08714584}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -678,9 +678,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 8.591419
+    m_Target: 30.708796
     speed: 2
-    m_Value: 8.591419
+    m_Value: 30.708796
   m_Ortho:
     m_Target: 1
     speed: 2
