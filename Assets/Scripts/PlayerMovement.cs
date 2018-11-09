@@ -8,14 +8,14 @@ public class PlayerMovement : MonoBehaviour {
 	public Animator animator;
 	[HideInInspector] public float runSpeed = 20f;
 
-	float horizontalMove = 0f;
-	bool jump = false;
+	public static float horizontalMove = 0f;
+	public static bool jump = false;
     bool IsAlive = true;
 
     // Update is called once per frame
     private void Update () {
-
-		horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+        if (!MobileButtonsScript.buttonClick)
+            horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
 		animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
@@ -49,4 +49,5 @@ public class PlayerMovement : MonoBehaviour {
 		jump = false;
         //Debug.Log(jump);
     }
+
 }
