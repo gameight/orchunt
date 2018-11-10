@@ -120,6 +120,7 @@
     <Compile Include="Assets\Scripts\CollisionTrigger.cs" />
     <Compile Include="Assets\Scripts\HealthBarController.cs" />
     <Compile Include="Assets\Scripts\MobileButtonsScript.cs" />
+    <Compile Include="Assets\Scripts\PlatformMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\SettingsAnimater.cs" />
     <Compile Include="Assets\Scripts\ShakeTrigger.cs" />
