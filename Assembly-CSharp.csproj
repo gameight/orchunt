@@ -117,12 +117,19 @@
     <Compile Include="Assets\Cinemachine\Timeline\CinemachineTrack.cs" />
     <Compile Include="Assets\FallingGameObject.cs" />
     <Compile Include="Assets\GUIs\Simple Vector Icons\Sample\IconPreview.cs" />
+<<<<<<< HEAD
     <Compile Include="Assets\Pendulum.cs" />
+=======
+>>>>>>> d5a244a4d4aafba83373fd27b8df9f559a04f233
     <Compile Include="Assets\Scripts\CameraShake.cs" />
     <Compile Include="Assets\Scripts\CharacterController2D.cs" />
     <Compile Include="Assets\Scripts\CollisionTrigger.cs" />
     <Compile Include="Assets\Scripts\HealthBarController.cs" />
     <Compile Include="Assets\Scripts\MobileButtonsScript.cs" />
+<<<<<<< HEAD
+=======
+    <Compile Include="Assets\Scripts\PlatformMovement.cs" />
+>>>>>>> d5a244a4d4aafba83373fd27b8df9f559a04f233
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\SettingsAnimater.cs" />
     <Compile Include="Assets\Scripts\ShakeTrigger.cs" />
