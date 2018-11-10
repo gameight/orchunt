@@ -115,12 +115,13 @@
     <Compile Include="Assets\Cinemachine\Timeline\CinemachineShot.cs" />
     <Compile Include="Assets\Cinemachine\Timeline\CinemachineTrack.cs" />
     <Compile Include="Assets\GUIs\Simple Vector Icons\Sample\IconPreview.cs" />
-    <Compile Include="Assets\MobileButtonsScript.cs" />
     <Compile Include="Assets\Scripts\CameraShake.cs" />
     <Compile Include="Assets\Scripts\CharacterController2D.cs" />
     <Compile Include="Assets\Scripts\CollisionTrigger.cs" />
     <Compile Include="Assets\Scripts\HealthBarController.cs" />
+    <Compile Include="Assets\Scripts\MobileButtonsScript.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\SettingsAnimater.cs" />
     <Compile Include="Assets\Scripts\ShakeTrigger.cs" />
     <Compile Include="Assets\Scripts\SkillsMenuConroller.cs" />
     <Compile Include="Assets\Scripts\StartScreenController.cs" />
