@@ -1365,6 +1365,7 @@ GameObject:
   - component: {fileID: 205439863}
   - component: {fileID: 205439862}
   - component: {fileID: 205439860}
+  - component: {fileID: 205439861}
   m_Layer: 0
   m_Name: Spear
   m_TagString: FallingObject
@@ -1396,7 +1397,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bca4453af92dafd49935958d86bf92e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dir: {x: -10, y: 0}
+  direction: {x: -10, y: 0}
+--- !u!61 &205439861
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 205439858}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 10.077842}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.8, y: 5}
+    newSize: {x: 0.76, y: 1.72}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.8, y: 25.155684}
+  m_EdgeRadius: 0
 --- !u!61 &205439862
 BoxCollider2D:
   m_ObjectHideFlags: 0

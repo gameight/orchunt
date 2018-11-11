@@ -4,20 +4,29 @@ using UnityEngine;
 
 public class SpearController : MonoBehaviour {
 
-    Rigidbody2D rb;
-    public Vector2 dir = new Vector2(-10, 0);
+    public Vector2 direction = new Vector2(-10, 0);
 
-    void Start()
+    private Rigidbody2D rigidbody2D;
+
+    private void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
-    void FixedUpdate()
+    //private void FixedUpdate()
+    //{
+    //    rigidbody2D.velocity = direction;
+    //}
+
+    private void OnTriggerEnter2D(Collider2D col)
     {
-        rb.velocity = dir;
+        if (col.gameObject.tag.Equals("Player"))
+        {
+            rigidbody2D.velocity = direction;
+        }
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag.Equals("Player") || collision.gameObject.name.Equals("Crate"))
         {
