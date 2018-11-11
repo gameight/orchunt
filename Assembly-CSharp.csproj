@@ -61,7 +61,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\AboveFallingObject.cs" />
     <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineBlendListCamera.cs" />
     <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineBrain.cs" />
     <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineClearShot.cs" />
@@ -115,25 +114,21 @@
     <Compile Include="Assets\Cinemachine\Timeline\CinemachineMixer.cs" />
     <Compile Include="Assets\Cinemachine\Timeline\CinemachineShot.cs" />
     <Compile Include="Assets\Cinemachine\Timeline\CinemachineTrack.cs" />
-    <Compile Include="Assets\FallingGameObject.cs" />
     <Compile Include="Assets\GUIs\Simple Vector Icons\Sample\IconPreview.cs" />
-<<<<<<< HEAD
-    <Compile Include="Assets\Pendulum.cs" />
-=======
->>>>>>> d5a244a4d4aafba83373fd27b8df9f559a04f233
+    <Compile Include="Assets\Scripts\AboveFallingObject.cs" />
     <Compile Include="Assets\Scripts\CameraShake.cs" />
     <Compile Include="Assets\Scripts\CharacterController2D.cs" />
     <Compile Include="Assets\Scripts\CollisionTrigger.cs" />
+    <Compile Include="Assets\Scripts\FallingGameObject.cs" />
     <Compile Include="Assets\Scripts\HealthBarController.cs" />
     <Compile Include="Assets\Scripts\MobileButtonsScript.cs" />
-<<<<<<< HEAD
-=======
+    <Compile Include="Assets\Scripts\Pendulum.cs" />
     <Compile Include="Assets\Scripts\PlatformMovement.cs" />
->>>>>>> d5a244a4d4aafba83373fd27b8df9f559a04f233
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\SettingsAnimater.cs" />
     <Compile Include="Assets\Scripts\ShakeTrigger.cs" />
     <Compile Include="Assets\Scripts\SkillsMenuConroller.cs" />
+    <Compile Include="Assets\Scripts\SpearController.cs" />
     <Compile Include="Assets\Scripts\StartScreenController.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
