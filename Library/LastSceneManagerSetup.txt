@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/LevelDesignTest.unity
+- path: Assets/Scenes/LevelDesignTest_umit.unity
   isLoaded: 1
   isActive: 1
