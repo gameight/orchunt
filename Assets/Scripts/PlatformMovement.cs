@@ -1,11 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using System.Collections;
 
-public class PlatformMovement : MonoBehaviour {
-
+public class PlatformMovement : MonoBehaviour
+{
     private Vector3 posA;
+
     private Vector3 posB;
+
     private Vector3 nexPos;
 
     [SerializeField]
@@ -17,23 +18,20 @@ public class PlatformMovement : MonoBehaviour {
     [SerializeField]
     private Transform transformB;
 
-	// Use this for initialization
-	void Start () {
-
-        childTransform.localPosition = posA;
-
-        transformB.localPosition = posB;
-
+    // Use this for initialization
+    void Start()
+    {
+        posA = childTransform.localPosition;
+        posB = transformB.localPosition;
         nexPos = posB;
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        Move();
-
     }
 
+    // Update is called once per frame
+    void Update()
+    {
+
+        Move();
+    }
     private void Move()
     {
         childTransform.localPosition = Vector3.MoveTowards(childTransform.localPosition, nexPos, speed * Time.deltaTime);
@@ -43,10 +41,23 @@ public class PlatformMovement : MonoBehaviour {
             ChangeDestination();
         }
     }
+
     private void ChangeDestination()
     {
         nexPos = nexPos != posA ? posA : posB;
     }
 
-   
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "Rina")
+        {
+            other.gameObject.layer = 8;
+            other.transform.SetParent(childTransform);
+        }
+    }
+    private void OnCollisionExit2D(Collision2D other)
+    {
+        other.transform.SetParent(null);
+    }
+
 }
