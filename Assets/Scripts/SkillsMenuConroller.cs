@@ -14,17 +14,17 @@ public class SkillsMenuConroller : MonoBehaviour {
     public void OnButtonClick()
     {
 
-        bool isSkillsMenuOpen = animator.GetBool("isDisplayed");
+        bool isSkillsMenuOpen = animator.GetBool("isOpen");
 
         Debug.Log("OnButtonClick has been called.");
         SkillsMenu.SetActive(true);
 
         if (isSkillsMenuOpen == false) { 
-        animator.SetBool("isDisplayed", true);
+        animator.SetBool("isOpen", true);
             Debug.Log("isDisplayessettrue");
         } else
         {
-            animator.SetBool("isDisplayed", false);
+            animator.SetBool("isOpen", false);
         }
 
 
