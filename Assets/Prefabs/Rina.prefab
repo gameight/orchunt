@@ -35,15 +35,15 @@ GameObject:
   m_Component:
   - component: {fileID: 4936215241453832}
   - component: {fileID: 212609081337790192}
-  - component: {fileID: 61256905648483058}
   - component: {fileID: 58007370773451256}
   - component: {fileID: 50281966820001688}
   - component: {fileID: 114750542758943626}
   - component: {fileID: 114714719226669924}
-  - component: {fileID: 95351698443528568}
+  - component: {fileID: 58021764472984660}
+  - component: {fileID: 95927907445434234}
   m_Layer: 8
   m_Name: Rina
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -55,7 +55,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1243277168084060}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.447, z: 0}
+  m_LocalPosition: {x: -0.044, y: -1.513, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4936215241453832}
@@ -67,8 +67,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1932470726195884}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.63, y: 2.88, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 154.35, y: 0.324, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4377892601645104}
@@ -93,7 +93,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!58 &58007370773451256
 CircleCollider2D:
@@ -107,11 +107,11 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.03, y: -0.86}
+  m_Offset: {x: 0.0046195984, y: -0.86}
   serializedVersion: 2
-  m_Radius: 0.7203398
---- !u!61 &61256905648483058
-BoxCollider2D:
+  m_Radius: 0.593441
+--- !u!58 &58021764472984660
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -122,20 +122,10 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.047554493, y: 0.26947927}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.12, y: 5.12}
-    newSize: {x: 5.12, y: 5.12}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: 0.0046195984, y: 0.31}
   serializedVersion: 2
-  m_Size: {x: 1.6643305, y: 1.981369}
-  m_EdgeRadius: 0
---- !u!95 &95351698443528568
+  m_Radius: 0.593441
+--- !u!95 &95927907445434234
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
@@ -164,7 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 189cfd2c497b39e48a5932b4a9118e21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 650
+  jumpForce: 660.01
   movementSmoothing: 0.05
   whatIsGround:
     serializedVersion: 2
@@ -198,7 +188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 114714719226669924}
-  animator: {fileID: 95351698443528568}
+  animator: {fileID: 95927907445434234}
   runSpeed: 40
 --- !u!212 &212609081337790192
 SpriteRenderer:
@@ -232,8 +222,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1781332255
+  m_SortingLayer: 3
   m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: f398a3f0b7e35214f84b25dabbc27018, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

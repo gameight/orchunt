@@ -13,9 +13,12 @@ public class PlayerMovement : MonoBehaviour {
     bool IsAlive = true;
 
     // Update is called once per frame
-    private void Update () {
+    private void Update ()
+    {
         if (!MobileButtonsScript.buttonClick)
+        {
             horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+        }           
 
 		animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
@@ -24,6 +27,7 @@ public class PlayerMovement : MonoBehaviour {
 			jump = true;
 			animator.SetBool("IsJumping", true);
 		}
+
         /**
         if (Input.GetButtonDown("Fire1"))
         {
