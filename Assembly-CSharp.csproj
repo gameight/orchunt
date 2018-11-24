@@ -122,6 +122,7 @@
     <Compile Include="Assets\Scripts\EnemyAttack.cs" />
     <Compile Include="Assets\Scripts\FallingGameObject.cs" />
     <Compile Include="Assets\Scripts\HealthBarController.cs" />
+    <Compile Include="Assets\Scripts\Level3CollisonTrigger.cs" />
     <Compile Include="Assets\Scripts\MobileButtonsScript.cs" />
     <Compile Include="Assets\Scripts\MovingPlatforms.cs" />
     <Compile Include="Assets\Scripts\MovingRightoLeftPlatform.cs" />
