@@ -24,7 +24,7 @@ public class PlayerMovement : MonoBehaviour {
 			jump = true;
 			animator.SetBool("IsJumping", true);
 		}
-
+        /**
         if (Input.GetButtonDown("Fire1"))
         {
             animator.SetBool("IsCasting", true);
@@ -34,6 +34,7 @@ public class PlayerMovement : MonoBehaviour {
         {
             animator.SetBool("IsCasting", false);
         }
+        */
     }
 
 	public void OnLanding ()

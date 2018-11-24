@@ -5,7 +5,8 @@ using UnityEngine;
 public class MobileButtonsScript : MonoBehaviour {
     
     public static bool buttonClick = false;
-    
+    public Animator animator;
+
     public void leftButtonClicked()
     {
         Debug.Log("left");
@@ -31,5 +32,10 @@ public class MobileButtonsScript : MonoBehaviour {
     {
         Debug.Log("jump");
         PlayerMovement.jump = true;
+    }
+
+    public void Update()
+    {
+        animator.SetFloat("Speed", Mathf.Abs(PlayerMovement.horizontalMove));
     }
 }
