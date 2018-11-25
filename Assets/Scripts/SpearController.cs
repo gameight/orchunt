@@ -42,8 +42,9 @@ public class SpearController : MonoBehaviour {
     {
         if (collision.gameObject.tag.Equals("Player") || collision.gameObject.name.Equals("Crate"))
         {
-            Attack();
             Destroy(gameObject, 0f);
+            Attack();
+           
         }
     }
 
