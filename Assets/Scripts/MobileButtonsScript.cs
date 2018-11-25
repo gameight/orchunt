@@ -11,14 +11,14 @@ public class MobileButtonsScript : MonoBehaviour {
     {
         Debug.Log("left");
         buttonClick = true;
-        PlayerMovement.horizontalMove = -40f;
+        PlayerMovement.horizontalMove = -40f;        
     }
 
     public void rightButtonClicked()
     {
         Debug.Log("right");
         buttonClick = true;
-        PlayerMovement.horizontalMove = 40f;
+        PlayerMovement.horizontalMove = 40f;      
     }
 
     public void buttonRelease()
