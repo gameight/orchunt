@@ -59,7 +59,7 @@ public class CharacterController2D : MonoBehaviour
             }            
         }
 
-        Debug.LogFormat("Grounded: {0}", grounded);
+        //Debug.LogFormat("Grounded: {0}", grounded);
     }
 
     public void Move(float move, bool jump)
