@@ -6,6 +6,8 @@ public class FallingGameObject : MonoBehaviour {
 
     Rigidbody2D rb;
 
+    
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -16,6 +18,7 @@ public class FallingGameObject : MonoBehaviour {
         {
             Invoke("DropPlatform", 0.2f);
             Destroy(gameObject, 1f);
+            
         }
     }
     void DropPlatform()
