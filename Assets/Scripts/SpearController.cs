@@ -54,10 +54,10 @@ public class SpearController : MonoBehaviour {
         
 
         // If the player has health to lose...
-        if (playerHealth.currentHealth > 0)
-        {
-            // ... damage the player.
-            playerHealth.TakeDamage(attackDamage);
-        }
+        //if (playerHealth.currentHealth > 0)
+        //{
+        //    // ... damage the player.
+        //    playerHealth.TakeDamage(attackDamage);
+        //}
     }
 }

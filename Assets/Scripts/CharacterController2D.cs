@@ -3,8 +3,8 @@ using UnityEngine.Events;
 
 public class CharacterController2D : MonoBehaviour
 {
-	[SerializeField] private float jumpForce = 650f; // Amount of force added when the player jumps.
-	[Range(0, .3f)] [SerializeField] private float movementSmoothing = .05f; // How much to smooth out the movement
+	private float jumpForce = 700f; // Amount of force added when the player jumps.
+	private float movementSmoothing = 0.2f; // How much to smooth out the movement
     [SerializeField] private LayerMask whatIsGround; // A mask determining what is ground to the character
 	[SerializeField] private Transform groundCheck;	// A position marking where to check if the player is grounded.
 
@@ -64,13 +64,13 @@ public class CharacterController2D : MonoBehaviour
 
     public void Move(float move, bool jump)
     {
-        if (grounded)
-        {
+        //if (grounded)
+        //{
             // Move the character by finding the target velocity
-            Vector3 targetVelocity = new Vector2(move * 10f, myRigidbody2D.velocity.y);
+            Vector3 targetVelocity = new Vector2(move * 12f, myRigidbody2D.velocity.y);
             // And then smoothing it out and applying it to the character
             myRigidbody2D.velocity = Vector3.SmoothDamp(myRigidbody2D.velocity, targetVelocity, ref m_Velocity, movementSmoothing);
-        }  
+        //}  
 
         // If the input is moving the player right and the player is facing left...
         if (move > 0 && !m_FacingRight)
