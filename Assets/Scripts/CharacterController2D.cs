@@ -3,7 +3,7 @@ using UnityEngine.Events;
 
 public class CharacterController2D : MonoBehaviour
 {
-	private float jumpForce = 700f; // Amount of force added when the player jumps.
+    [SerializeField] private float jumpForce = 700f; // Amount of force added when the player jumps.
 	private float movementSmoothing = 0.2f; // How much to smooth out the movement
     [SerializeField] private LayerMask whatIsGround; // A mask determining what is ground to the character
 	[SerializeField] private Transform groundCheck;	// A position marking where to check if the player is grounded.
@@ -59,7 +59,7 @@ public class CharacterController2D : MonoBehaviour
             }            
         }
 
-        Debug.LogFormat("Grounded: {0}", grounded);
+        //Debug.LogFormat("Grounded: {0}", grounded);
     }
 
     public void Move(float move, bool jump)

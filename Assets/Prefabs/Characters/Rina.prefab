@@ -41,7 +41,6 @@ GameObject:
   - component: {fileID: 114714719226669924}
   - component: {fileID: 58021764472984660}
   - component: {fileID: 95927907445434234}
-  - component: {fileID: 114890782244030406}
   m_Layer: 8
   m_Name: Rina
   m_TagString: Player
@@ -155,6 +154,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 189cfd2c497b39e48a5932b4a9118e21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jumpForce: 660.01
+  movementSmoothing: 0.05
   whatIsGround:
     serializedVersion: 2
     m_Bits: 55
@@ -188,20 +189,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 114714719226669924}
   animator: {fileID: 95927907445434234}
---- !u!114 &114890782244030406
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1932470726195884}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc3cf3412948b4a3396ef66b1fb33a70, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerStats:
-    Health: 100
-  fallBoundary: -15
+  runSpeed: 40
 --- !u!212 &212609081337790192
 SpriteRenderer:
   m_ObjectHideFlags: 1
