@@ -127,6 +127,7 @@
     <Compile Include="Assets\Scripts\MobileButtonsScript.cs" />
     <Compile Include="Assets\Scripts\MovingPlatforms.cs" />
     <Compile Include="Assets\Scripts\MovingRightoLeftPlatform.cs" />
+    <Compile Include="Assets\Scripts\Parallaxing.cs" />
     <Compile Include="Assets\Scripts\Pendulum.cs" />
     <Compile Include="Assets\Scripts\PlatformMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerHealth.cs" />

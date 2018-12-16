@@ -5,6 +5,7 @@ using UnityEngine;
 public class FallingGameObject : MonoBehaviour {
 
     Rigidbody2D rb;
+    [SerializeField] float dropTime = 0.2f; //default invoke time
 
     void Start()
     {
@@ -14,8 +15,8 @@ public class FallingGameObject : MonoBehaviour {
     {
         if (col.gameObject.tag.Equals("Player"))
         {
-            Invoke("DropPlatform", 0.2f);
-            Destroy(gameObject, 1f);
+            Invoke("DropPlatform", dropTime);
+            Destroy(gameObject, dropTime+0.8f);
         }
     }
     void DropPlatform()
