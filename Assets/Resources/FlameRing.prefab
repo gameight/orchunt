@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114391912704566460}
   m_Layer: 0
   m_Name: Flame_Ring_02
-  m_TagString: Untagged
+  m_TagString: Skill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 4684547128787216}
   m_Layer: 0
   m_Name: FlameRing
-  m_TagString: Untagged
+  m_TagString: Skill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -17,6 +17,7 @@ public class SkillButtonController : MonoBehaviour {
     public void onSpellClick()
     {
         Debug.Log("Button clicked");
-        SkillController.activateSpell(this.name);
+        GameObject[] rina = GameObject.FindGameObjectsWithTag("Player");
+        rina[0].GetComponent<SkillController>().activateSpell(this.name);
     }
 }
