@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyAI : MonoBehaviour {
 
-    public static float speed;
+    public float speed;
     public float stoppingDistance;
     bool facingRight = true;
     private Transform target;

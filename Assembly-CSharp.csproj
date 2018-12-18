@@ -119,7 +119,6 @@
     <Compile Include="Assets\Scripts\CameraShake.cs" />
     <Compile Include="Assets\Scripts\CharacterController2D.cs" />
     <Compile Include="Assets\Scripts\CollisionTrigger.cs" />
-    <Compile Include="Assets\Scripts\DamageSystem.cs" />
     <Compile Include="Assets\Scripts\EnemyAI.cs" />
     <Compile Include="Assets\Scripts\EnemyAttack.cs" />
     <Compile Include="Assets\Scripts\FallingGameObject.cs" />
@@ -141,7 +140,6 @@
     <Compile Include="Assets\Scripts\SkillsMenuConroller.cs" />
     <Compile Include="Assets\Scripts\SpearController.cs" />
     <Compile Include="Assets\Scripts\StartScreenController.cs" />
-    <Compile Include="Assets\Scripts\TrapColliderScript.cs" />
     <Compile Include="Assets\UETools\Magic_Particle_Effects\Scripts\CameraMovement.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
