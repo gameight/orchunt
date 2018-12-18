@@ -2,21 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SkillButtonController : MonoBehaviour {
+public class SkillButtonController : MonoBehaviour
+{
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    // Use this for initialization
+    void Start()
+    {
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
 
     public void onSpellClick()
     {
         Debug.Log("Button clicked");
-        SkillController.activateSpell(this.name);
+        GameObject[] rina = GameObject.FindGameObjectsWithTag("Player");
+        rina[0].GetComponent<SkillController>().activateSpell(this.name);
     }
 }

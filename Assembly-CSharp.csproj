@@ -116,12 +116,18 @@
     <Compile Include="Assets\Cinemachine\Timeline\CinemachineTrack.cs" />
     <Compile Include="Assets\GUIs\Simple Vector Icons\Sample\IconPreview.cs" />
     <Compile Include="Assets\Scripts\AboveFallingObject.cs" />
+    <Compile Include="Assets\Scripts\AI\AttackBehaviour.cs" />
+    <Compile Include="Assets\Scripts\AI\DieBehaviour.cs" />
+    <Compile Include="Assets\Scripts\AI\EnemyAI.cs" />
+    <Compile Include="Assets\Scripts\AI\FollowBehaviour.cs" />
+    <Compile Include="Assets\Scripts\AI\IdleBehaviour.cs" />
+    <Compile Include="Assets\Scripts\AI\PatrolBehaviour.cs" />
     <Compile Include="Assets\Scripts\CameraShake.cs" />
     <Compile Include="Assets\Scripts\CharacterController2D.cs" />
     <Compile Include="Assets\Scripts\CollisionTrigger.cs" />
-    <Compile Include="Assets\Scripts\EnemyAI.cs" />
-    <Compile Include="Assets\Scripts\EnemyAttack.cs" />
     <Compile Include="Assets\Scripts\FallingGameObject.cs" />
+    <Compile Include="Assets\Scripts\GameMaster.cs" />
+    <Compile Include="Assets\Scripts\GameOverUI.cs" />
     <Compile Include="Assets\Scripts\HealthBarController.cs" />
     <Compile Include="Assets\Scripts\Level3CollisonTrigger.cs" />
     <Compile Include="Assets\Scripts\MobileButtonsScript.cs" />
@@ -130,6 +136,7 @@
     <Compile Include="Assets\Scripts\Parallaxing.cs" />
     <Compile Include="Assets\Scripts\Pendulum.cs" />
     <Compile Include="Assets\Scripts\PlatformMovement.cs" />
+    <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\SettingsAnimater.cs" />
@@ -140,6 +147,7 @@
     <Compile Include="Assets\Scripts\SkillsMenuConroller.cs" />
     <Compile Include="Assets\Scripts\SpearController.cs" />
     <Compile Include="Assets\Scripts\StartScreenController.cs" />
+    <Compile Include="Assets\Scripts\TrapColliderScript.cs" />
     <Compile Include="Assets\UETools\Magic_Particle_Effects\Scripts\CameraMovement.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
