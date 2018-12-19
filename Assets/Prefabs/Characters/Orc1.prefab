@@ -23,7 +23,8 @@ GameObject:
   - component: {fileID: 95442407841687830}
   - component: {fileID: 50171598701794538}
   - component: {fileID: 70533244594111752}
-  - component: {fileID: 114805739164486760}
+  - component: {fileID: 114197613699845462}
+  - component: {fileID: 61883731814203472}
   m_Layer: 0
   m_Name: Orc1
   m_TagString: Untagged
@@ -63,7 +64,32 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
+--- !u!61 &61883731814203472
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1527621967113574}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.2999649, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 13.68, y: 11.5}
+    newSize: {x: 13.68, y: 11.5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 16.079895, y: 11.5}
+  m_EdgeRadius: 0
 --- !u!70 &70533244594111752
 CapsuleCollider2D:
   m_ObjectHideFlags: 1
@@ -97,7 +123,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114805739164486760
+--- !u!114 &114197613699845462
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -105,7 +131,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1527621967113574}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc41872bf66cd6e448ffb93fd182c327, type: 3}
+  m_Script: {fileID: 11500000, guid: 5920a36702b09dd4c86be750c578953b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   walkingSpeed: 1.5
@@ -113,7 +139,7 @@ MonoBehaviour:
   patrolMin: 0
   patrolMax: 5
   perceptionDistance: 10
-  stoppingDistance: 3
+  stoppingDistance: 0
   damage: 15
   health: 100
   startPosition: {x: 0, y: 0}

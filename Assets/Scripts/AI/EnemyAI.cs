@@ -10,7 +10,7 @@ public class EnemyAI : MonoBehaviour {
     public float patrolMin = 0f;
     public float patrolMax = 5f;
     public float perceptionDistance = 10f;
-    public float stoppingDistance = 3f;
+    public float stoppingDistance = 0f;
     public float damage = 15f;
 
     [HideInInspector] public float health = 100f;
@@ -39,9 +39,9 @@ public class EnemyAI : MonoBehaviour {
 
         DetectPlayer();
 
-        //Die();
+        Die();
 
-        //Debug.Log("Health: " + playerHealth);
+        Debug.Log("Enemy Health: " + health);
 
         // If the next update is reached
         if (Time.time >= nextUpdate)
@@ -72,35 +72,59 @@ public class EnemyAI : MonoBehaviour {
         if (Vector2.Distance(transform.position, playerPosition) < perceptionDistance && Vector2.Distance(transform.position, playerPosition) > stoppingDistance && playerHealth > 0 && playerHealth <= 100 && !isAttacking) //Follow
         {
             //Debug.Log("Rina Görüldü, Mesafe: " + Vector2.Distance(transform.position, playerPosition));
-
+            //Debug.Log("1");
             animator.SetBool("IsAttacking", false);
-            isAttacking = false;
+            //isAttacking = false;
 
             animator.SetBool("IsFollowing", true);            
         }
-        else if (Vector2.Distance(transform.position, playerPosition) <= stoppingDistance && playerHealth > 0 && playerHealth <= 100 && !isAttacking) // Attack
+        else if (isAttacking && playerHealth > 0 && playerHealth <= 100)
         {
-            //Debug.Log("Rina'ya Saldırılıyor, Mesafe: " + Vector2.Distance(transform.position, playerPosition));
-
+            //Debug.Log("2");
             animator.SetBool("IsFollowing", false);
-
-            animator.SetBool("IsAttacking", true);
-            isAttacking = true;
+            animator.SetBool("IsAttacking", true);   
         }
+        //else if (Vector2.Distance(transform.position, playerPosition) <= stoppingDistance && playerHealth > 0 && playerHealth <= 100 && !isAttacking) // Attack
+        //{
+        //    //Debug.Log("Rina'ya Saldırılıyor, Mesafe: " + Vector2.Distance(transform.position, playerPosition));
+
+        //    animator.SetBool("IsFollowing", false);
+
+        //    animator.SetBool("IsAttacking", true);
+        //    isAttacking = true;
+        //}
         else //Idling
         {
+            //Debug.Log("3");
             //Debug.Log("Rina Görülmedi, Mesafe: " + Vector2.Distance(transform.position, playerPosition));
 
             animator.SetBool("IsAttacking", false);
-            isAttacking = false;
+            //isAttacking = false;
 
             animator.SetBool("IsFollowing", false);          
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            isAttacking = true;
+        } 
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            isAttacking = false;
+            //Debug.Log("Çıktı");
+        }
+    }
+
     private void Die()
     {
-        health = 0f;
+        //health = 0f;
 
         if (health <= 0f && !isDying)
         {

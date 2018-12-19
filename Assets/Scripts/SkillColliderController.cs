@@ -27,13 +27,13 @@ public class SkillColliderController : MonoBehaviour
         //{
 
         //}
-        //if (other.gameObject.tag == "Enemy")
-        //{
-        //    Debug.Log("CollisionEnemy");
-        //    Debug.Log("PlayerDamage: " + Damage);
-        //    Debug.Log("Effect: " + Effect);
-        //    other.gameObject.GetComponent<DamageSystem>().TakeDamage(Damage, Effect, true); 
-        //}
+        if (other.gameObject.tag == "Enemy")
+        {
+            Debug.Log("CollisionEnemy");
+            Debug.Log("PlayerDamage: " + Damage);
+            Debug.Log("Effect: " + Effect);
+            other.gameObject.GetComponent<EnemyAI>().health -= Random.Range(0.75f, 1) * Damage; //.TakeDamage(Damage, Effect, true);
+        }
         GameObject[] rina = GameObject.FindGameObjectsWithTag("Player");
         rina[0].GetComponent<SkillController>().resetSpell(this.transform.parent.name);
     }

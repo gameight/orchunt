@@ -23,14 +23,15 @@ GameObject:
   - component: {fileID: 95895982955208058}
   - component: {fileID: 50621569348908274}
   - component: {fileID: 70611041827360136}
-  - component: {fileID: 114735656827673222}
+  - component: {fileID: 61941230588365484}
+  - component: {fileID: 114078454511937856}
   m_Layer: 0
   m_Name: Orc2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4390279423447344
 Transform:
   m_ObjectHideFlags: 1
@@ -63,7 +64,32 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
+--- !u!61 &61941230588365484
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1098079792491638}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 14.36, y: 11.86}
+    newSize: {x: 13.68, y: 11.5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 14.36, y: 11.86}
+  m_EdgeRadius: 0
 --- !u!70 &70611041827360136
 CapsuleCollider2D:
   m_ObjectHideFlags: 1
@@ -97,7 +123,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114735656827673222
+--- !u!114 &114078454511937856
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -105,7 +131,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1098079792491638}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc41872bf66cd6e448ffb93fd182c327, type: 3}
+  m_Script: {fileID: 11500000, guid: 5920a36702b09dd4c86be750c578953b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   walkingSpeed: 1.5
@@ -113,7 +139,7 @@ MonoBehaviour:
   patrolMin: 0
   patrolMax: 5
   perceptionDistance: 10
-  stoppingDistance: 3
+  stoppingDistance: 0
   damage: 15
   health: 100
   startPosition: {x: 0, y: 0}
