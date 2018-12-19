@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class AboveFallingObject : MonoBehaviour {
     Rigidbody2D rb;
-
+    public GameObject RockEffect;
     private void Start()
+
     {
         rb = GetComponent<Rigidbody2D>();
     }
@@ -19,6 +20,18 @@ public class AboveFallingObject : MonoBehaviour {
         if (collision.gameObject.name.Equals(""))
             Invoke("DropPlatform", 0.1f);
             Destroy(gameObject, 0.1f);
+            RockEffect.SetActive(true);
+            StartCoroutine(StopRockEffect());
+        if (collision.gameObject.tag == "Player")
+        {
+            collision.gameObject.GetComponent<Player>().playerStats.Health -= 5;
+        }
+    }
+
+    IEnumerator StopRockEffect()
+    {
+        yield return new WaitForSeconds(0.3f);
+        RockEffect.SetActive(false);
     }
 
 }
