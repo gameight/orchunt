@@ -28,7 +28,7 @@ public class Player : MonoBehaviour
 
         if (playerStats.Health <= 0)
         {
-            GameMaster.killPlayer(this);
+            GameMaster.KillPlayer(this);
         }
     }
 

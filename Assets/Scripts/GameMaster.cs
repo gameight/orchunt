@@ -7,7 +7,7 @@ public class GameMaster : MonoBehaviour
 {
 
     public static GameMaster gm;
-    private static int _remainingLives = 3;
+    private static int _remainingLives = 1;
     public static int RemainingLives
     {
         get { return _remainingLives; }
@@ -47,7 +47,7 @@ public class GameMaster : MonoBehaviour
         GameObject.FindGameObjectWithTag("MainCamera").GetComponentInChildren<CinemachineVirtualCamera>().Follow = GameObject.FindGameObjectWithTag("Player").transform;
 
     }
-    public static void killPlayer(Player player)
+    public static void KillPlayer(Player player)
     {
 
         Destroy(player.gameObject);
@@ -66,3 +66,7 @@ public class GameMaster : MonoBehaviour
 
 
 }
+
+
+
+

@@ -15,8 +15,8 @@ public class GameOverUI : MonoBehaviour
     }
     public void Retry()
     {
-        Application.LoadLevel(Application.loadedLevel);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+      
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); 
 
     }
 
