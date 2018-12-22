@@ -29,20 +29,22 @@ public class PatrolBehaviour : StateMachineBehaviour
         GetValues(animator);
         GenerateSpot();
 
-        animator.GetComponent<EnemyAI>().DoPatrollingCoroutine(animator, false);
+        //animator.GetComponent<EnemyAI>().DoPatrollingCoroutine(animator, false);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (Vector2.Distance(animator.transform.position, new Vector2(startPosition.x + randomSpot, startPosition.y)) > 0.1f)
+        GetValues(animator);
+
+        if (Vector2.Distance(animator.transform.position, new Vector2(startPosition.x + randomSpot, animator.transform.position.y)) > 0.1f)
         {
-            animator.transform.position = Vector2.MoveTowards(new Vector2(animator.transform.position.x, 0), new Vector2(startPosition.x + randomSpot, startPosition.y), walkingSpeed * Time.deltaTime);
+            animator.transform.position = Vector2.MoveTowards(animator.transform.position, new Vector2(startPosition.x + randomSpot, animator.transform.position.y), walkingSpeed * Time.deltaTime);
         }
         else
         {
-            GetValues(animator);
-            GenerateSpot();
+            //GenerateSpot();
+            animator.SetBool("IsPatrolling", false);
         }
 
         if (startPosition.x + randomSpot > animator.transform.position.x && animator.GetComponent<EnemyAI>().facingRight)

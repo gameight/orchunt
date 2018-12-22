@@ -25,23 +25,23 @@ public class FollowBehaviour : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        GetValues(animator);
+
         if (Vector2.Distance(animator.transform.position, playerPosition) > stoppingDistance)
         {
             animator.transform.position = Vector2.MoveTowards(animator.transform.position, new Vector2(playerPosition.x, animator.transform.position.y), runSpeed * Time.deltaTime);
-        }
-        else
-        {
-            GetValues(animator);
         }
 
         if (playerPosition.x > animator.transform.position.x && animator.GetComponent<EnemyAI>().facingRight)
         {
             animator.GetComponent<EnemyAI>().Flip();
+            Debug.Log("Follow1");
         }
 
         if (playerPosition.x < animator.transform.position.x && !animator.GetComponent<EnemyAI>().facingRight)
         {
             animator.GetComponent<EnemyAI>().Flip();
+            Debug.Log("Follow2");
         }
     }
 

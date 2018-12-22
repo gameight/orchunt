@@ -5,15 +5,15 @@ using UnityEngine;
 
 public class EnemyAI : MonoBehaviour {
 
-    public float walkingSpeed = 1.5f;
-    public float runSpeed = 2.5f;
+    public float health = 100f;
+    public float walkingSpeed = 1f;
+    public float runSpeed = 1.8f;
     public float patrolMin = 0f;
     public float patrolMax = 5f;
     public float perceptionDistance = 10f;
     public float stoppingDistance = 0f;
     public float damage = 15f;
-
-    [HideInInspector] public float health = 100f;
+   
     [HideInInspector] public Vector2 startPosition;
     [HideInInspector] public bool facingRight = true;
 
@@ -28,8 +28,6 @@ public class EnemyAI : MonoBehaviour {
     {
         animator = GetComponent<Animator>();
         startPosition = transform.position;
-
-        //Invoke("Die", 5f);
     }
 
     private void Update()
@@ -39,9 +37,9 @@ public class EnemyAI : MonoBehaviour {
 
         DetectPlayer();
 
-        Die();
+        CheckDie();
 
-        Debug.Log("Enemy Health: " + health);
+        //Debug.Log("Enemy Health: " + health);
 
         // If the next update is reached
         if (Time.time >= nextUpdate)
@@ -54,7 +52,7 @@ public class EnemyAI : MonoBehaviour {
             // Call your function
             if (isAttacking)
             {
-                Attack();
+                GiveDamage();
             }
         }
     }
@@ -69,38 +67,28 @@ public class EnemyAI : MonoBehaviour {
 
     public void DetectPlayer()
     {
-        if (Vector2.Distance(transform.position, playerPosition) < perceptionDistance && Vector2.Distance(transform.position, playerPosition) > stoppingDistance && playerHealth > 0 && playerHealth <= 100 && !isAttacking) //Follow
+        float distance = Vector2.Distance(transform.position, playerPosition);
+
+        //Debug.Log("Distance: " + distance);
+
+        if (distance < perceptionDistance && distance > stoppingDistance && playerHealth > 0 && playerHealth <= 100 && !isAttacking) //Follow
         {
-            //Debug.Log("Rina Görüldü, Mesafe: " + Vector2.Distance(transform.position, playerPosition));
-            //Debug.Log("1");
             animator.SetBool("IsAttacking", false);
-            //isAttacking = false;
+            animator.SetBool("IsPatrolling", false);
 
             animator.SetBool("IsFollowing", true);            
         }
-        else if (isAttacking && playerHealth > 0 && playerHealth <= 100)
+        else if (isAttacking && playerHealth > 0 && playerHealth <= 100) //Attack
         {
-            //Debug.Log("2");
             animator.SetBool("IsFollowing", false);
+            animator.SetBool("IsPatrolling", false);
+
             animator.SetBool("IsAttacking", true);   
         }
-        //else if (Vector2.Distance(transform.position, playerPosition) <= stoppingDistance && playerHealth > 0 && playerHealth <= 100 && !isAttacking) // Attack
-        //{
-        //    //Debug.Log("Rina'ya Saldırılıyor, Mesafe: " + Vector2.Distance(transform.position, playerPosition));
-
-        //    animator.SetBool("IsFollowing", false);
-
-        //    animator.SetBool("IsAttacking", true);
-        //    isAttacking = true;
-        //}
         else //Idling
         {
-            //Debug.Log("3");
-            //Debug.Log("Rina Görülmedi, Mesafe: " + Vector2.Distance(transform.position, playerPosition));
-
             animator.SetBool("IsAttacking", false);
-            //isAttacking = false;
-
+            //animator.SetBool("IsPatrolling", false);
             animator.SetBool("IsFollowing", false);          
         }
     }
@@ -118,11 +106,10 @@ public class EnemyAI : MonoBehaviour {
         if (collision.tag == "Player")
         {
             isAttacking = false;
-            //Debug.Log("Çıktı");
         }
     }
 
-    private void Die()
+    private void CheckDie()
     {
         //health = 0f;
 
@@ -133,17 +120,12 @@ public class EnemyAI : MonoBehaviour {
         }
     }
 
-    private void Attack()
+    private void GiveDamage()
     {
         if (playerHealth > 0 && playerHealth <= 100)
         {
             GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().playerStats.Health -= (int)(UnityEngine.Random.Range(0.75f, 1f) * damage);
         }
-        else
-        {
-            animator.SetBool("IsAttacking", false);
-            isAttacking = false;
-        }        
     }
 
     public void DoPatrollingCoroutine(Animator animator, bool isPatrol)
@@ -155,7 +137,10 @@ public class EnemyAI : MonoBehaviour {
     {
         yield return new WaitForSeconds(4f);
 
-        animator.SetBool("IsPatrolling", isPatrol);
+        if (!isAttacking && !animator.GetBool("IsFollowing"))
+        {
+            animator.SetBool("IsPatrolling", isPatrol);
+        }       
     }
 
     public void DoDestroyEnemy()

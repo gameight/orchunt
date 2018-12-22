@@ -27,7 +27,7 @@ GameObject:
   - component: {fileID: 61883731814203472}
   m_Layer: 0
   m_Name: Orc1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1527621967113574}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 118.68, y: -0.05, z: -0.095703125}
+  m_LocalPosition: {x: 112.17, y: -1.65, z: -0.095703125}
   m_LocalScale: {x: 0.271, y: 0.271, z: 0.271}
   m_Children: []
   m_Father: {fileID: 0}
@@ -77,10 +77,10 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.2999649, y: 0}
+  m_Offset: {x: 0.3088894, y: 5.9950633}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 0}
     oldSize: {x: 13.68, y: 11.5}
     newSize: {x: 13.68, y: 11.5}
     adaptiveTilingThreshold: 0.5
@@ -88,7 +88,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 16.079895, y: 11.5}
+  m_Size: {x: 23.232327, y: 11.233548}
   m_EdgeRadius: 0
 --- !u!70 &70533244594111752
 CapsuleCollider2D:
@@ -102,8 +102,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.325011, y: 0.12624045}
-  m_Size: {x: 5.2252665, y: 11.407689}
+  m_Offset: {x: 1.325011, y: 5.988078}
+  m_Size: {x: 5.2252665, y: 11.540918}
   m_Direction: 0
 --- !u!95 &95442407841687830
 Animator:
@@ -117,7 +117,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 7e6c2707378dd9d4d9cc91a76a14abc2, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -134,14 +134,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5920a36702b09dd4c86be750c578953b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkingSpeed: 1.5
-  runSpeed: 2.5
+  health: 100
+  walkingSpeed: 1
+  runSpeed: 1.8
   patrolMin: 0
   patrolMax: 5
   perceptionDistance: 10
   stoppingDistance: 0
   damage: 15
-  health: 100
   startPosition: {x: 0, y: 0}
   facingRight: 1
 --- !u!212 &212082559307488514
@@ -178,7 +178,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 9
   m_Sprite: {fileID: 21300000, guid: 9b4d75ce9b1dd034cacfef2957987bfd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1

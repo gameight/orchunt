@@ -5,7 +5,7 @@ AnimationClip:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Orc_Runs
+  m_Name: Orc1_Run
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,29 +20,29 @@ AnimationClip:
   - curve:
     - time: 0
       value: {fileID: 21300000, guid: 2bab4f8f12396fc45af0458a0529dce5, type: 3}
-    - time: 0.083333336
+    - time: 0.14285715
       value: {fileID: 21300000, guid: 1601599887cdc1e40a2e1323bb16a6e1, type: 3}
-    - time: 0.16666667
+    - time: 0.2857143
       value: {fileID: 21300000, guid: df8e09d5ae4074a4dbf43660f29fde90, type: 3}
-    - time: 0.25
+    - time: 0.42857143
       value: {fileID: 21300000, guid: 2433ff1da70f2f54da7d7870949ce17a, type: 3}
-    - time: 0.33333334
+    - time: 0.5714286
       value: {fileID: 21300000, guid: 3220a99c8b1c65d429c7e0d243cbfeb0, type: 3}
-    - time: 0.41666666
+    - time: 0.71428573
       value: {fileID: 21300000, guid: f83707982187dfc4b9cac3416b69dc55, type: 3}
-    - time: 0.5
+    - time: 0.85714287
       value: {fileID: 21300000, guid: dd8c003daaed41441a742ea642f03591, type: 3}
-    - time: 0.5833333
+    - time: 1
       value: {fileID: 21300000, guid: 2bab4f8f12396fc45af0458a0529dce5, type: 3}
-    - time: 0.6666666
+    - time: 1.1428572
       value: {fileID: 21300000, guid: 1601599887cdc1e40a2e1323bb16a6e1, type: 3}
-    - time: 0.74999994
+    - time: 1.2857143
       value: {fileID: 21300000, guid: df8e09d5ae4074a4dbf43660f29fde90, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
-  m_SampleRate: 12
+  m_SampleRate: 7
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -72,7 +72,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.83333325
+    m_StopTime: 1.4285715
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
