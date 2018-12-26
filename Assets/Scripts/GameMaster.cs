@@ -7,10 +7,10 @@ public class GameMaster : MonoBehaviour
 {
 
     public static GameMaster gm;
-    private static int _remainingLives = 1;
+
     public static int RemainingLives
     {
-        get { return _remainingLives; }
+        get { return PlayerData.Instance.remainingLive; }
     }
 
     void Awake()
@@ -51,8 +51,9 @@ public class GameMaster : MonoBehaviour
     {
 
         Destroy(player.gameObject);
-        _remainingLives -= 1;
-        if (_remainingLives <= 0)
+        PlayerData.Instance.remainingLive -= 1;
+        //_remainingLives -= 1;
+        if (PlayerData.Instance.remainingLive <= 0)
         {
             gm.EndGame();
         }
