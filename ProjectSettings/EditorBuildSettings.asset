@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/MapScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Tests/InGameUITest.unity
     guid: aa949fca65d88ef4e994008cc1ddf2d1
   - enabled: 1

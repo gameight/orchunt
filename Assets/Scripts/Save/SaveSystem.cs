@@ -30,6 +30,12 @@ public class SaveSystem : MonoBehaviour {
         Debug.Log(PlayerData.Instance.level + " " + PlayerData.Instance.remainingLive);
     }
 
+    public void TestPlayerData()
+    {
+        PlayerData.Instance.level  = 5;
+        PlayerData.Instance.remainingLive = 3;
+    }
+
     
 
 }
