@@ -13,6 +13,8 @@ public class EnemyAI : MonoBehaviour {
     public float perceptionDistance = 10f;
     public float stoppingDistance = 0f;
     public float damage = 15f;
+
+    //public bool die = false;
    
     [HideInInspector] public Vector2 startPosition;
     [HideInInspector] public bool facingRight = true;
@@ -110,14 +112,18 @@ public class EnemyAI : MonoBehaviour {
     }
 
     private void CheckDie()
-    {
-        //health = 0f;
-
+    {  
         if (health <= 0f && !isDying)
         {
             isDying = true;
             animator.SetBool("IsDying", true);
         }
+
+        //if (die)
+        //{
+        //    die = false;
+        //    animator.SetBool("IsDying", true);
+        //}
     }
 
     private void GiveDamage()

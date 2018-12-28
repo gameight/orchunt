@@ -35,13 +35,13 @@ public class FollowBehaviour : StateMachineBehaviour
         if (playerPosition.x > animator.transform.position.x && animator.GetComponent<EnemyAI>().facingRight)
         {
             animator.GetComponent<EnemyAI>().Flip();
-            Debug.Log("Follow1");
+            //Debug.Log("Follow1");
         }
 
         if (playerPosition.x < animator.transform.position.x && !animator.GetComponent<EnemyAI>().facingRight)
         {
             animator.GetComponent<EnemyAI>().Flip();
-            Debug.Log("Follow2");
+            //Debug.Log("Follow2");
         }
     }
 
