@@ -46,7 +46,7 @@ public class SkillController : MonoBehaviour
 
     public void resetSpell(string spellString)
     {
-        Debug.Log("Reseting spell: " + spellString);
+        //Debug.Log("Reseting spell: " + spellString);
         for (int a = 0; a < 2; a++)
         {
             if (spell[a].name == spellString)
