@@ -11,7 +11,7 @@ public class CharacterController2D : MonoBehaviour
 	const float groundRadius = .2f; // Radius of the overlap circle to determine if grounded
 	bool grounded;            // Whether or not the player is grounded.
 	Rigidbody2D myRigidbody2D;
-	bool m_FacingRight = true;  // For determining which way the player is currently facing.
+	public static bool m_FacingRight = true;  // For determining which way the player is currently facing.
 	Vector3 m_Velocity = Vector3.zero;
 
 	[Header("Events")]

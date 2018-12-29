@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 50646140543662898}
   - component: {fileID: 233310468059122332}
   - component: {fileID: 114978327108709848}
+  - component: {fileID: 114101746840771234}
   m_Layer: 0
   m_Name: Pendulum
   m_TagString: Untagged
@@ -91,6 +92,18 @@ EdgeCollider2D:
   - {x: 0.65116847, y: -5.3984976}
   - {x: 0.37640923, y: -4.3873363}
   - {x: 0.086483315, y: 7.5306907}
+--- !u!114 &114101746840771234
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1939693449450708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c161d49a92908e94ca102ddbe0efaff9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damage: 15
 --- !u!114 &114978327108709848
 MonoBehaviour:
   m_ObjectHideFlags: 1
