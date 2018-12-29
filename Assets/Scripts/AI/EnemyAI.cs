@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyAI : MonoBehaviour {
 
@@ -116,6 +117,8 @@ public class EnemyAI : MonoBehaviour {
         if (health <= 0f && !isDying)
         {
             isDying = true;
+			if (this.name.Contains("Boss")
+				AllSpellsController.setSpellsBools(this.name, SceneManager.GetActiveScene().name);
             animator.SetBool("IsDying", true);
         }
 
