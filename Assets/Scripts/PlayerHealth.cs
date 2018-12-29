@@ -21,9 +21,9 @@ public class PlayerHealth : MonoBehaviour {
 
     private void Awake()
     {
-        anim = GetComponent<Animator>();
-        playerMovement = GetComponent<PlayerMovement>();
-        currentHealth = startingHealth;
+        //anim = GetComponent<Animator>();
+        //playerMovement = GetComponent<PlayerMovement>();
+        //currentHealth = startingHealth;
     }
 
     // Use this for initialization
@@ -46,27 +46,27 @@ public class PlayerHealth : MonoBehaviour {
 
     public void TakeDamage(int amount)
     {
-        damaged = true;
+        //damaged = true;
 
-        currentHealth -= amount;
+        //currentHealth -= amount;
 
-        healthSlider.value = currentHealth;
+        //healthSlider.value = currentHealth;
 
-        if(currentHealth <= 0 && !isDead)
-        {
-            Death();
-        }
+        //if(currentHealth <= 0 && !isDead)
+        //{
+        //    Death();
+        //}
 
-        Debug.Log("Player health is : " + currentHealth);
+        //Debug.Log("Player health is : " + currentHealth);
     }
 
     void Death()
     {
-        isDead = true;
+        //isDead = true;
 
-        anim.SetTrigger("Die");
+        //anim.SetTrigger("Die");
 
-        playerMovement.enabled = false;
+        //playerMovement.enabled = false;
         
     }
 }

@@ -21,7 +21,7 @@ public class EnemyAI : MonoBehaviour {
     [HideInInspector] public bool facingRight = true;
 
     private Vector2 playerPosition;
-    private int playerHealth;
+    private float playerHealth;
     private Animator animator;
     private int nextUpdate = 1; // Next update in second
     private bool isAttacking = false;
@@ -36,7 +36,7 @@ public class EnemyAI : MonoBehaviour {
     private void Update()
     {
         playerPosition = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>().position;
-        playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().playerStats.Health;
+        playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().Health;
 
         DetectPlayer();
 
@@ -133,7 +133,7 @@ public class EnemyAI : MonoBehaviour {
     {
         if (playerHealth > 0 && playerHealth <= 100)
         {
-            GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().playerStats.Health -= (int)(UnityEngine.Random.Range(0.75f, 1f) * damage);
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().DamageToPlayer((int)(UnityEngine.Random.Range(0.75f, 1f) * damage));
         }
     }
 
