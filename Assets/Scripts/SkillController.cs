@@ -16,7 +16,7 @@ public class SkillController : MonoBehaviour
 
     public static bool[] activateSpellBool = { false, false };
     static bool continueBool = false;
-    static bool right = true;
+    static bool[] right = { true, true };
     IEnumerator enumerator = null;
 
     // Use this for initialization
@@ -52,7 +52,7 @@ public class SkillController : MonoBehaviour
         var coll = spell[a].GetComponentInChildren<ParticleSystem>().collision;
         coll.enabled = false;
         spell[a].name = spell[a].name.Replace("(Clone)", "");
-        spell[a].transform.position = new Vector3(rina.transform.position.x+1, rina.transform.position.y, rina.transform.position.z);
+        spell[a].transform.position = new Vector3(rina.transform.position.x + 1.5f, rina.transform.position.y, rina.transform.position.z);
     }
 
     public void resetSpell(string spellString)
@@ -64,6 +64,8 @@ public class SkillController : MonoBehaviour
         {
             if (spell[a].name == spellString)
             {
+                var coll = spell[a].GetComponentInChildren<ParticleSystem>().collision;
+                coll.enabled = false;
                 spell[a].transform.SetParent(rina.transform);
                 activateSpellBool[a] = false;
                 if (enumerator != null)
@@ -85,11 +87,11 @@ public class SkillController : MonoBehaviour
             {
                 var coll = spell[a].GetComponentInChildren<ParticleSystem>().collision;
                 coll.enabled = true;
-                right = CharacterController2D.m_FacingRight;
-                if (right)
-                    spell[a].transform.position = new Vector3(rina.transform.position.x+1, rina.transform.position.y, rina.transform.position.z);
+                right[a] = CharacterController2D.m_FacingRight;
+                if (right[a])
+                    spell[a].transform.position = new Vector3(rina.transform.position.x + 1.5f, rina.transform.position.y, rina.transform.position.z);
                 else
-                    spell[a].transform.position = new Vector3(rina.transform.position.x-1, rina.transform.position.y, rina.transform.position.z);
+                    spell[a].transform.position = new Vector3(rina.transform.position.x - 1.5f, rina.transform.position.y, rina.transform.position.z);
                 spell[a].transform.parent = null;
                 activateSpellBool[a] = true;
                 enumerator = resetSpellCoroutineWithTime(spellString);
@@ -105,7 +107,7 @@ public class SkillController : MonoBehaviour
         {
             yield return null;
             spell[a].GetComponentInChildren<ParticleSystemRenderer>().enabled = true;
-            if (right)
+            if (right[a])
                 spell[a].transform.Translate(speed * Time.deltaTime, 0, 0);
             else
                 spell[a].transform.Translate(-speed * Time.deltaTime, 0, 0);
