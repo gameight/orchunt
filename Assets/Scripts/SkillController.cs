@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SkillController : MonoBehaviour
 {
@@ -15,16 +16,13 @@ public class SkillController : MonoBehaviour
 
     public static bool[] activateSpellBool = { false, false };
     static bool continueBool = false;
+    static bool right = true;
+    IEnumerator enumerator = null;
 
     // Use this for initialization
     void Start()
     {
         defaultSkills();
-    }
-
-    // Update is called once per frame
-    void FixedUpdate()
-    {
     }
 
     void defaultSkills()
@@ -39,19 +37,25 @@ public class SkillController : MonoBehaviour
         Debug.Log("Selecting spell: " + spellString);
         rina = GameObject.Find("Rina");
         spell[a] = Instantiate(Resources.Load(spellString)) as GameObject;
+        spell[a].transform.SetParent(rina.transform);
         spell[a].GetComponentInChildren<ParticleSystemRenderer>().enabled = false;
         spell[a].name = spell[a].name.Replace("(Clone)", "");
-        spell[a].transform.position = new Vector3(rina.transform.position.x + 1, rina.transform.position.y, rina.transform.position.z);
+        spell[a].transform.position = new Vector3(rina.transform.position.x+1, rina.transform.position.y, rina.transform.position.z);
     }
 
     public void resetSpell(string spellString)
     {
+        GameObject[] button = GameObject.FindGameObjectsWithTag(spellString);
+        button[0].GetComponent<Button>().interactable = true;
         Debug.Log("Reseting spell: " + spellString);
         for (int a = 0; a < 2; a++)
         {
             if (spell[a].name == spellString)
             {
+                spell[a].transform.SetParent(rina.transform);
                 activateSpellBool[a] = false;
+                if (enumerator != null)
+                    StopCoroutine(enumerator);
                 StartCoroutine(resetSpellCoroutine(a));
                 break;
             }
@@ -60,12 +64,22 @@ public class SkillController : MonoBehaviour
 
     public void activateSpell(string spellString)
     {
+        GameObject[] button = GameObject.FindGameObjectsWithTag(spellString);
+        button[0].GetComponent<Button>().interactable = false;
         Debug.Log("Activating spell");
         for (int a = 0; a < 2; a++)
         {
             if (spell[a].name == spellString)
             {
+                right = CharacterController2D.m_FacingRight;
+                if (right)
+                    spell[a].transform.position = new Vector3(rina.transform.position.x+1, rina.transform.position.y, rina.transform.position.z);
+                else
+                    spell[a].transform.position = new Vector3(rina.transform.position.x-1, rina.transform.position.y, rina.transform.position.z);
+                spell[a].transform.parent = null;
                 activateSpellBool[a] = true;
+                enumerator = resetSpellCoroutineWithTime(spellString);
+                StartCoroutine(enumerator);
                 StartCoroutine(activateSpellCoroutine(a));
             }
         }
@@ -77,8 +91,10 @@ public class SkillController : MonoBehaviour
         {
             yield return null;
             spell[a].GetComponentInChildren<ParticleSystemRenderer>().enabled = true;
-            spell[a].transform.Translate(speed * Time.deltaTime, 0, 0);
-
+            if (right)
+                spell[a].transform.Translate(speed * Time.deltaTime, 0, 0);
+            else
+                spell[a].transform.Translate(-speed * Time.deltaTime, 0, 0);
         }
         continueBool = true;
         yield return 0;
@@ -88,7 +104,13 @@ public class SkillController : MonoBehaviour
     {
         yield return new WaitUntil(() => continueBool == true);
         spell[a].GetComponentInChildren<ParticleSystemRenderer>().enabled = false;
-        //spell[a].SetActive(false);
-        spell[a].transform.position = new Vector3(rina.transform.position.x + 1, rina.transform.position.y, rina.transform.position.z);
+        spell[a].transform.position = new Vector3(rina.transform.position.x+1, rina.transform.position.y, rina.transform.position.z);
     }
+
+    IEnumerator resetSpellCoroutineWithTime(string spellString)
+    {
+        yield return new WaitForSeconds(3);
+        resetSpell(spellString);
+    }
+    
 }

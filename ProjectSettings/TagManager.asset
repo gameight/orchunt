@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - FlameRing
+  - FallingObject
+  - Spell
   layers:
   - Default
   - TransparentFX
