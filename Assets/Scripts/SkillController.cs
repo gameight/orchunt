@@ -28,8 +28,18 @@ public class SkillController : MonoBehaviour
     void defaultSkills()
     {
         Debug.Log("Selecting default spell");
-        selectSpell(0, "FlameRing");
-        selectSpell(1, "Halo");
+        selectSpell(0, "Light");
+        selectSpell(1, "Cosmic");
+    }
+
+    public void changeSkills(string spell1, string spell2)
+    {
+        Destroy(GameObject.Find(spell[0].name));
+        Destroy(GameObject.Find(spell[1].name));
+
+        Debug.Log("Changing spell");
+        selectSpell(0, spell1);
+        selectSpell(1, spell2);
     }
 
     public void selectSpell(int a, string spellString)
@@ -39,6 +49,8 @@ public class SkillController : MonoBehaviour
         spell[a] = Instantiate(Resources.Load(spellString)) as GameObject;
         spell[a].transform.SetParent(rina.transform);
         spell[a].GetComponentInChildren<ParticleSystemRenderer>().enabled = false;
+        var coll = spell[a].GetComponentInChildren<ParticleSystem>().collision;
+        coll.enabled = false;
         spell[a].name = spell[a].name.Replace("(Clone)", "");
         spell[a].transform.position = new Vector3(rina.transform.position.x+1, rina.transform.position.y, rina.transform.position.z);
     }
@@ -71,6 +83,8 @@ public class SkillController : MonoBehaviour
         {
             if (spell[a].name == spellString)
             {
+                var coll = spell[a].GetComponentInChildren<ParticleSystem>().collision;
+                coll.enabled = true;
                 right = CharacterController2D.m_FacingRight;
                 if (right)
                     spell[a].transform.position = new Vector3(rina.transform.position.x+1, rina.transform.position.y, rina.transform.position.z);

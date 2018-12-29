@@ -32,7 +32,7 @@ public class SkillColliderController : MonoBehaviour
             Debug.Log("CollisionEnemy");
             Debug.Log("PlayerDamage: " + Damage);
             Debug.Log("Effect: " + Effect);
-            //other.gameObject.GetComponent<EnemyAI>().health -= Random.Range(0.75f, 1) * Damage; //.TakeDamage(Damage, Effect, true);
+            other.gameObject.GetComponent<EnemyAI>().health -= Random.Range(0.75f, 1) * Damage; //.TakeDamage(Damage, Effect, true);
         }
         GameObject[] rina = GameObject.FindGameObjectsWithTag("Player");
         rina[0].GetComponent<SkillController>().resetSpell(this.transform.parent.name);

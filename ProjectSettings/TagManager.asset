@@ -8,6 +8,13 @@ TagManager:
   - FlameRing
   - FallingObject
   - Spell
+  - Light
+  - Ice
+  - Cosmic
+  - Halo
+  - Poison
+  - ToxicCloud
+  - Mystery
   layers:
   - Default
   - TransparentFX
