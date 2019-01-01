@@ -7,6 +7,7 @@ public class GameMaster : MonoBehaviour
 {
 
     public static GameMaster gm;
+    public static SaveSystem load;
 
     public static int RemainingLives
     {
@@ -23,6 +24,7 @@ public class GameMaster : MonoBehaviour
 
     void Start()
     {
+        load.Load();
 
     }
     public Transform playerPrefab;

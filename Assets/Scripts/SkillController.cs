@@ -85,6 +85,7 @@ public class SkillController : MonoBehaviour
         {
             if (spell[a].name == spellString)
             {
+                SoundManager.PlaySound("Skill");
                 var coll = spell[a].GetComponentInChildren<ParticleSystem>().collision;
                 coll.enabled = true;
                 right[a] = CharacterController2D.m_FacingRight;

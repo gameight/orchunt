@@ -45,10 +45,13 @@ public class Player : MonoBehaviour
     public void DamageToPlayer(float damage)
     {
         health -= damage;
+        SoundManager.PlaySound("rinahurt");
+
 
         if (health <= 0)
         {
             // Enable the die animation of Rina in here...
+            SoundManager.PlaySound("GameOver");
 
             GameMaster.KillPlayer(this);
         }
