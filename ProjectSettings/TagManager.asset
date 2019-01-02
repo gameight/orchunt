@@ -15,6 +15,7 @@ TagManager:
   - Poison
   - ToxicCloud
   - Mystery
+  - Boss
   layers:
   - Default
   - TransparentFX
