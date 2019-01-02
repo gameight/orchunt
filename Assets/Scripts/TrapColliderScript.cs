@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class TrapColliderScript : MonoBehaviour
 {
-
     [SerializeField] int Damage = 10;
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -12,7 +11,7 @@ public class TrapColliderScript : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             Debug.Log("Trap damage");
-            GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().playerStats.Health -= Damage;
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().DamageToPlayer(Damage);
         }
     }
 }

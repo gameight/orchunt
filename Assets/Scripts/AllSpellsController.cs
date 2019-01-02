@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class AllSpellsController : MonoBehaviour {
 
+    public static Dictionary<string, bool> Pairs;
+
     public static bool[] allSpells = { true, true, false, false, false, false, false, false };
 
     public static void setSpellsBools(string boss, string sceneName)

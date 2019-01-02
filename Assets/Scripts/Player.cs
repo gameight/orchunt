@@ -4,30 +4,55 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    private float health;
+    private float fallBoundary;
 
-    [System.Serializable]
-    public class PlayerStats
+    public float Health
     {
-
-        public int Health = 100;
-
+        get
+        {
+            return health;
+        }        
     }
-    public PlayerStats playerStats = new PlayerStats();
 
-    public int fallBoundary = -15;
+    public float FallBoundary
+    {
+        get
+        {
+            return fallBoundary;
+        }
+
+        set
+        {
+            fallBoundary = value;
+        }
+    }
+
+    private void Start()
+    {
+        health = 100f;
+        fallBoundary = -15f;
+    }
 
     private void Update()
     {
-        if (transform.position.y <= fallBoundary)
-            DamagePlayer(999);
+        if (transform.position.y <= FallBoundary)
+        {
+            DamageToPlayer(999);
+        }            
     }
 
-    public void DamagePlayer(int damage)
+    public void DamageToPlayer(float damage)
     {
-        playerStats.Health -= damage;
+        health -= damage;
+        SoundManager.PlaySound("rinahurt");
 
-        if (playerStats.Health <= 0)
+
+        if (health <= 0)
         {
+            // Enable the die animation of Rina in here...
+            SoundManager.PlaySound("GameOver");
+
             GameMaster.KillPlayer(this);
         }
     }

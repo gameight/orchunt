@@ -19,6 +19,7 @@ public class SkillsSelectMenuController : MonoBehaviour {
 
         animator = GameObject.Find("SkillsMenu").GetComponent<Animator>();
         selectedSkills = new List<GameObject>();
+
 	}
 	
 	// Update is called once per frame
@@ -26,16 +27,12 @@ public class SkillsSelectMenuController : MonoBehaviour {
 		
 	}
 
-   
-    
-
     public void skillButtonClicked(GameObject gameObject)
     {
         
         Image SkillImage = gameObject.transform.Find("Mask").GetChild(0).GetComponent<Image>();
 
         checkTheList(gameObject);
-        
     }
     
     public void AcceptButtonClicked() {
@@ -45,6 +42,12 @@ public class SkillsSelectMenuController : MonoBehaviour {
 
         if (selectedSkills.Count == 2)
         {
+            selected1.transform.parent.parent.name = selectedSkills[0].transform.Find("Mask").GetChild(0).GetComponent<Image>().name;
+            selected1.transform.parent.parent.tag = selectedSkills[0].transform.Find("Mask").GetChild(0).GetComponent<Image>().name;
+            selected2.transform.parent.parent.name = selectedSkills[1].transform.Find("Mask").GetChild(0).GetComponent<Image>().name;
+            selected2.transform.parent.parent.tag = selectedSkills[1].transform.Find("Mask").GetChild(0).GetComponent<Image>().name;
+            GameObject.FindGameObjectWithTag("Player").GetComponent<SkillController>().changeSkills(selected1.transform.parent.parent.name, selected2.transform.parent.parent.name);
+
             selected1.sprite = selectedSkills[0].transform.Find("Mask").GetChild(0).GetComponent<Image>().sprite;
             selected2.sprite = selectedSkills[1].transform.Find("Mask").GetChild(0).GetComponent<Image>().sprite;
         }
@@ -60,31 +63,30 @@ public class SkillsSelectMenuController : MonoBehaviour {
 
     public void checkTheList(GameObject gameObject)
     {
-        
+        string st = gameObject.transform.parent.name;
+        int a = int.Parse(st.Substring(st.Length - 1, 1));
 
-        if (!selectedSkills.Contains(gameObject))
-        {
-            selectedSkills.Add(gameObject);
-            gameObject.GetComponent<Image>().color = newColor;
+        if (AllSpellsController.allSpells[a - 1]) { 
 
-            if(selectedSkills.Count > 2)
+            if (!selectedSkills.Contains(gameObject))
             {
-                selectedSkills[0].GetComponent<Image>().color = oldColor;
-                selectedSkills.Remove(selectedSkills[0]);
-                
+                selectedSkills.Add(gameObject);
+                gameObject.GetComponent<Image>().color = newColor;
+
+                if(selectedSkills.Count > 2)
+                {
+                    selectedSkills[0].GetComponent<Image>().color = oldColor;
+                    selectedSkills.Remove(selectedSkills[0]);
+                }
+            
             }
-            
-        }
-        else
-        {
-            selectedSkills.Remove(gameObject);
-            gameObject.GetComponent<Image>().color = oldColor;
-            
+            else
+            {
+                selectedSkills.Remove(gameObject);
+                gameObject.GetComponent<Image>().color = oldColor;
 
-        }
 
+            }
+        }
     }
-
-   
-
 }

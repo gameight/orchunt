@@ -24,7 +24,7 @@ public class AboveFallingObject : MonoBehaviour {
             StartCoroutine(StopRockEffect());
         if (collision.gameObject.tag == "Player")
         {
-            collision.gameObject.GetComponent<Player>().playerStats.Health -= 5;
+            collision.gameObject.GetComponent<Player>().DamageToPlayer(5);
         }
     }
 

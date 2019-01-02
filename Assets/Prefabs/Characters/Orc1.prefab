@@ -140,7 +140,7 @@ MonoBehaviour:
   patrolMin: 0
   patrolMax: 5
   perceptionDistance: 10
-  stoppingDistance: 0
+  stoppingDistance: 0.01
   damage: 15
   startPosition: {x: 0, y: 0}
   facingRight: 1
