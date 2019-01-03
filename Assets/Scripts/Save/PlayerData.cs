@@ -10,8 +10,8 @@ public class PlayerData
 
     public int level;
     public int remainingLive;
-    public string[] activeSpells;
-    public string[] earnedSpells;
+    public List<string> activeSpells;
+    public List<string> earnedSpells;
     public float sound;
     public float music;
     public string language;

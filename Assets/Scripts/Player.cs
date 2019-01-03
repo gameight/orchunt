@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
 {
     private float health;
     private float fallBoundary;
+    private bool dead;
 
     public float Health
     {
@@ -36,8 +37,9 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        if (transform.position.y <= FallBoundary)
+        if (transform.position.y <= FallBoundary && !dead)
         {
+            dead = true;
             DamageToPlayer(999);
         }            
     }

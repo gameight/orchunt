@@ -5,35 +5,55 @@ using UnityEngine;
 
 public class SaveSystem : MonoBehaviour {
 
+    public bool loaded;
+
 	// Use this for initialization
 	void Start () {
         DontDestroyOnLoad(this);
 
         PlayerData pd = new PlayerData();
-
-        Debug.Log(PlayerData.Instance.level + " " + PlayerData.Instance.remainingLive);
+        Load();
     }
 	
 	
     public void Save()
     {
-        PlayerPrefs.SetString("data", JsonUtility.ToJson(PlayerData.Instance));
+        PlayerPrefs.SetString("data1", JsonUtility.ToJson(PlayerData.Instance));
         Debug.Log("Data Kaydedildi"+PlayerData.Instance.level + " " + PlayerData.Instance.remainingLive);
     }
 
     public void Load()
     {
-        string json = PlayerPrefs.GetString("data");       
-        PlayerData pd = JsonUtility.FromJson<PlayerData>(json);
-        PlayerData.Instance.UpdatePlayerData(pd);
+        
+        string json = PlayerPrefs.GetString("data1");
 
-        Debug.Log(PlayerData.Instance.level + " " + PlayerData.Instance.remainingLive);
+
+
+        if (json.Length > 0) {
+            PlayerData pd = JsonUtility.FromJson<PlayerData>(json);
+            PlayerData.Instance.UpdatePlayerData(pd);
+
+            Debug.Log("level = " + PlayerData.Instance.level + " " + "remaining lives= " + PlayerData.Instance.remainingLive);
+        } 
+        else
+        {
+            DefaultPlayerData();
+        }
+
+        loaded = true;
+
     }
 
-    public void TestPlayerData()
+    public void DefaultPlayerData()
     {
-        PlayerData.Instance.level  = 5;
+        PlayerData.Instance.level = 1;
         PlayerData.Instance.remainingLive = 3;
+        PlayerData.Instance.activeSpells = new List<string>() { "Light","Cosmic"};
+        PlayerData.Instance.earnedSpells = new List<string>() ;
+        PlayerData.Instance.music = 1f;
+        PlayerData.Instance.sound = 1f;
+
+        Save();
     }
 
     
