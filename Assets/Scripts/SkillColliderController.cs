@@ -41,7 +41,7 @@ public class SkillColliderController : MonoBehaviour
     void DamageAndEffect(string name)
     {
         name = name.Replace("(Clone)", "");
-        Debug.Log("DamageAndEffect: - " + name);
+        //Debug.Log("DamageAndEffect: - " + name);
         switch (name)
         {
             case "Cosmic":

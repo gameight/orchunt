@@ -27,7 +27,7 @@ public class SkillController : MonoBehaviour
 
     void defaultSkills()
     {
-        Debug.Log("Selecting default spell");
+        //Debug.Log("Selecting default spell");
         selectSpell(0, "Light");
         selectSpell(1, "Cosmic");
     }
