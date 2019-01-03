@@ -7,7 +7,7 @@ public class StartScreenController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        
+        SoundManager.PlaySound("MenuBackground"); 
 		
 	}
 	

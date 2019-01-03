@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour {
 
-    public static AudioClip rinaHurtSound, jumpSound, skillSound, levelSound, gameOverSound;
+    public static AudioClip rinaHurtSound, jumpSound, skillSound, levelSound, gameOverSound,mapSound;
     static AudioSource Audiosrc;
 
 
@@ -16,6 +16,7 @@ public class SoundManager : MonoBehaviour {
         skillSound = Resources.Load<AudioClip>("Skill");
         levelSound = Resources.Load<AudioClip>("LevelBackground");
         gameOverSound = Resources.Load<AudioClip>("GameOver");
+        mapSound = Resources.Load<AudioClip>("MenuBackground");
 
 
         Audiosrc = GetComponent<AudioSource>();

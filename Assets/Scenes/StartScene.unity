@@ -113,6 +113,48 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &434298507
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4281938033516088, guid: c3096a6b31fbd46b582fde178489ea55, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 96.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4281938033516088, guid: c3096a6b31fbd46b582fde178489ea55, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4281938033516088, guid: c3096a6b31fbd46b582fde178489ea55, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4281938033516088, guid: c3096a6b31fbd46b582fde178489ea55, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4281938033516088, guid: c3096a6b31fbd46b582fde178489ea55, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4281938033516088, guid: c3096a6b31fbd46b582fde178489ea55, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4281938033516088, guid: c3096a6b31fbd46b582fde178489ea55, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4281938033516088, guid: c3096a6b31fbd46b582fde178489ea55, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c3096a6b31fbd46b582fde178489ea55, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &462838093
 GameObject:
   m_ObjectHideFlags: 0
@@ -1051,6 +1093,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 835e3799a9cfc44cab8547e9b5be711d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loaded: 0
 --- !u!4 &2050184994
 Transform:
   m_ObjectHideFlags: 0
