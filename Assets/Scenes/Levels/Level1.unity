@@ -18842,6 +18842,11 @@ Prefab:
       propertyPath: m_Color.g
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114750542758943626, guid: ce3b7f0e322ca854285456be6dd76e22,
+        type: 2}
+      propertyPath: rina
+      value: 
+      objectReference: {fileID: 1676322249}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce3b7f0e322ca854285456be6dd76e22, type: 2}
   m_IsPrefabAsset: 0

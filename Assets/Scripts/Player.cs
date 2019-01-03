@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public Animator animator;
     private float health;
     private float fallBoundary;
     private bool dead;
@@ -55,8 +56,17 @@ public class Player : MonoBehaviour
             // Enable the die animation of Rina in here...
             SoundManager.PlaySound("GameOver");
 
+
+            //TODO : It needs to wait until animations over.!!
+            animator.SetFloat("Health", health);
+            
             GameMaster.KillPlayer(this);
         }
     }
+
+    
+
+    
+
 
 }

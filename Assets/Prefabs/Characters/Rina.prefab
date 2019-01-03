@@ -100,7 +100,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1932470726195884}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.06, y: -1, z: 0}
+  m_LocalPosition: {x: 96.9, y: 1.9, z: 0}
   m_LocalScale: {x: 0.73, y: 0.73, z: 0.73}
   m_Children:
   - {fileID: 4377892601645104}
@@ -187,9 +187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5155aed00cf494c168fbda1997ff7260, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerStats:
-    Health: 100
-  fallBoundary: -15
+  animator: {fileID: 95927907445434234}
 --- !u!114 &114714719226669924
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -246,6 +244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d505da4ff14313f45869638ae613111e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 95927907445434234}
 --- !u!198 &198494423647497392
 ParticleSystem:
   m_ObjectHideFlags: 1

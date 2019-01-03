@@ -431,8 +431,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c83052bd33bd8b46acaed7011cd21ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  SettingMenus: {fileID: 0}
+  panel: {fileID: 0}
 --- !u!1001 &331675251
 Prefab:
   m_ObjectHideFlags: 0
@@ -534,6 +533,35 @@ Prefab:
       propertyPath: m_SortingLayer
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 212253192669764952, guid: 929af2d503b554386b1ca3affae7240f,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4677289125767760, guid: 929af2d503b554386b1ca3affae7240f, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 212253192669764952, guid: 929af2d503b554386b1ca3affae7240f,
+        type: 2}
+      propertyPath: m_SpriteSortPoint
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212253192669764952, guid: 929af2d503b554386b1ca3affae7240f,
+        type: 2}
+      propertyPath: m_MaskInteraction
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 212253192669764952, guid: 929af2d503b554386b1ca3affae7240f,
+        type: 2}
+      propertyPath: m_DrawMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212253192669764952, guid: 929af2d503b554386b1ca3affae7240f,
+        type: 2}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 929af2d503b554386b1ca3affae7240f, type: 2}
   m_IsPrefabAsset: 0
@@ -581,12 +609,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2055981999}
-        m_MethodName: LoadLevel
-        m_Mode: 3
+      - m_Target: {fileID: 331675268}
+        m_MethodName: portalClicked
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 331675252}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
@@ -752,19 +780,30 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2055981999}
-        m_MethodName: LoadLevel
-        m_Mode: 3
+      - m_Target: {fileID: 331675268}
+        m_MethodName: portalClicked
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 331675256}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &331675268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 331675252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d196d6ead03abf1419942609dc3d36bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -938,8 +977,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c83052bd33bd8b46acaed7011cd21ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  SettingMenus: {fileID: 0}
+  panel: {fileID: 0}
 --- !u!224 &761943190
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1036,7 +1074,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4452008739467686, guid: 245ad9a5142fc8d4da0cc007cfcf975e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.78
+      value: 0.69
       objectReference: {fileID: 0}
     - target: {fileID: 4452008739467686, guid: 245ad9a5142fc8d4da0cc007cfcf975e, type: 2}
       propertyPath: m_LocalPosition.z

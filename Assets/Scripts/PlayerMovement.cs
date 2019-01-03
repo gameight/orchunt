@@ -31,6 +31,8 @@ public class PlayerMovement : MonoBehaviour {
             SoundManager.PlaySound("Jump");
 		}
 
+      
+
         /**
         if (Input.GetButtonDown("Fire1"))
         {

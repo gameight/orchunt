@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class SkillController : MonoBehaviour
 {
+    public Animator animator;
 
     private float speed = 12f;
 
@@ -74,6 +75,7 @@ public class SkillController : MonoBehaviour
                 break;
             }
         }
+        animator.SetBool("IsCasting", false);
     }
 
     public void activateSpell(string spellString)
@@ -81,10 +83,12 @@ public class SkillController : MonoBehaviour
         GameObject[] button = GameObject.FindGameObjectsWithTag(spellString);
         button[0].GetComponent<Button>().interactable = false;
         Debug.Log("Activating spell");
+        animator.SetBool("IsCasting", true);
         for (int a = 0; a < 2; a++)
         {
             if (spell[a].name == spellString)
             {
+                
                 SoundManager.PlaySound("Skill");
                 var coll = spell[a].GetComponentInChildren<ParticleSystem>().collision;
                 coll.enabled = true;
@@ -98,8 +102,10 @@ public class SkillController : MonoBehaviour
                 enumerator = resetSpellCoroutineWithTime(spellString);
                 StartCoroutine(enumerator);
                 StartCoroutine(activateSpellCoroutine(a));
+                
             }
         }
+        
     }
 
     IEnumerator activateSpellCoroutine(int a)
