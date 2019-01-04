@@ -10,7 +10,7 @@ public class SettingsController : MonoBehaviour {
     public void setMasterVolume(float volume)
     {
         Debug.Log("Volume: " + volume);
-        //audioMixerMaster.SetFloat("volume", volume);
+        audioMixerMaster.SetFloat("Volume", volume);
     }
 
 }

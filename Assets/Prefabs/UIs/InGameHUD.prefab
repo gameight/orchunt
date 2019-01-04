@@ -145,7 +145,6 @@ GameObject:
   - component: {fileID: 114718645883637724}
   - component: {fileID: 114591023834344170}
   - component: {fileID: 114423175198570240}
-  - component: {fileID: 114299148316691518}
   m_Layer: 5
   m_Name: InGameHUD
   m_TagString: Untagged
@@ -2186,10 +2185,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 224850141472697024}
   m_HandleRect: {fileID: 224147196036702712}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 100
+  m_MinValue: -80
+  m_MaxValue: 20
   m_WholeNumbers: 0
-  m_Value: 100
+  m_Value: 20
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -3635,17 +3634,6 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &114299148316691518
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1043060838182962}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c66f436bf8116e498476b98e09018a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114301181460940852
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5982,7 +5970,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 114423175198570240}
         m_MethodName: jumpButton
         m_Mode: 1
         m_Arguments:
@@ -6428,7 +6416,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fd8e0a25db90bb459de24177cd1da83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioMixerMaster: {fileID: 0}
+  audioMixerMaster: {fileID: 24100000, guid: cc4eb45365c28e243bc6a7fdeb90a5fb, type: 2}
 --- !u!114 &114795103695550644
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6516,13 +6504,13 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1751559922445454}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.4156863, g: 0.3372549, b: 0.25490198, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -8770,7 +8758,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -41.2, y: -2.7999997}
+  m_AnchoredPosition: {x: -41.200012, y: -2.7999992}
   m_SizeDelta: {x: 19, y: 22.04}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224330169207744840
@@ -8984,7 +8972,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.13518748, y: 0.6642223}
   m_AnchorMax: {x: 0.85356253, y: 0.9554445}
-  m_AnchoredPosition: {x: -0.000061035156, y: -1.999939}
+  m_AnchoredPosition: {x: 0, y: -1.999939}
   m_SizeDelta: {x: 0, y: 2.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224463303481138246
@@ -10057,7 +10045,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 40}
-  m_SizeDelta: {x: 230.59, y: 39.54}
+  m_SizeDelta: {x: 230.59, y: 55}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224970776312225984
 RectTransform:

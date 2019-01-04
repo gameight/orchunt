@@ -150,8 +150,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 40}
-  m_SizeDelta: {x: 230.59, y: 39.54}
+  m_AnchoredPosition: {x: 0, y: 33.14}
+  m_SizeDelta: {x: 230.59, y: 55}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &16501704
 MonoBehaviour:
@@ -193,10 +193,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 1228848415}
   m_HandleRect: {fileID: 1909106333}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 100
+  m_MinValue: -80
+  m_MaxValue: 20
   m_WholeNumbers: 0
-  m_Value: 100
+  m_Value: 20
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -329,7 +329,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fd8e0a25db90bb459de24177cd1da83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioMixerMaster: {fileID: 0}
+  audioMixerMaster: {fileID: 24100000, guid: cc4eb45365c28e243bc6a7fdeb90a5fb, type: 2}
 --- !u!114 &65132575
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5343,13 +5343,13 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1909106332}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.4156863, g: 0.3372549, b: 0.25490198, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

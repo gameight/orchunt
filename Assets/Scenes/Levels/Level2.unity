@@ -5514,6 +5514,16 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: jumpButton
       objectReference: {fileID: 0}
+    - target: {fileID: 224699489980283892, guid: f1972cf07d0afd74388ff29b085256c0,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.9999924
+      objectReference: {fileID: 0}
+    - target: {fileID: 224328909024563568, guid: f1972cf07d0afd74388ff29b085256c0,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -2.7999997
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114299148316691518, guid: f1972cf07d0afd74388ff29b085256c0, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: f1972cf07d0afd74388ff29b085256c0, type: 2}
@@ -16359,7 +16369,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4364525473189350, guid: 0b25adbc49c0ad84db483380dc7765d3, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0.17960085
+      value: -0.6957644
       objectReference: {fileID: 0}
     - target: {fileID: 4235235445755656, guid: 0b25adbc49c0ad84db483380dc7765d3, type: 2}
       propertyPath: m_LocalPosition.y
@@ -16367,16 +16377,16 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4364525473189350, guid: 0b25adbc49c0ad84db483380dc7765d3, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -8.770353
+      value: -1.1838584
       objectReference: {fileID: 0}
     - target: {fileID: 20133748639804168, guid: 0b25adbc49c0ad84db483380dc7765d3,
         type: 2}
       propertyPath: orthographic size
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4364525473189350, guid: 0b25adbc49c0ad84db483380dc7765d3, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 8.132173
+      value: -0.2046341
       objectReference: {fileID: 0}
     - target: {fileID: 4235235445755656, guid: 0b25adbc49c0ad84db483380dc7765d3, type: 2}
       propertyPath: m_LocalPosition.z
