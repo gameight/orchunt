@@ -13,17 +13,20 @@ public class AttackBehaviour : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        Vector2 playerPosition = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>().position;
-
-        if (playerPosition.x > animator.transform.position.x && animator.GetComponent<EnemyAI>().facingRight)
+        if (GameObject.FindGameObjectWithTag("Player") != null)
         {
-            animator.GetComponent<EnemyAI>().Flip();
-        }
+            Vector2 playerPosition = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>().position;
 
-        if (playerPosition.x < animator.transform.position.x && !animator.GetComponent<EnemyAI>().facingRight)
-        {
-            animator.GetComponent<EnemyAI>().Flip();
-        }
+            if (playerPosition.x > animator.transform.position.x && animator.GetComponent<EnemyAI>().facingRight)
+            {
+                animator.GetComponent<EnemyAI>().Flip();
+            }
+
+            if (playerPosition.x < animator.transform.position.x && !animator.GetComponent<EnemyAI>().facingRight)
+            {
+                animator.GetComponent<EnemyAI>().Flip();
+            }
+        }        
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
