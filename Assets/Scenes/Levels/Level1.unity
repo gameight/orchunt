@@ -1982,7 +1982,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 083b79cd6280b4186beaea0a39352110, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.6509804}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -5420,6 +5420,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RockEffect: {fileID: 0}
+  Damage: 5
 --- !u!61 &477401681
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19307,6 +19308,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RockEffect: {fileID: 0}
+  Damage: 5
 --- !u!61 &1644201362
 BoxCollider2D:
   m_ObjectHideFlags: 0
