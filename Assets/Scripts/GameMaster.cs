@@ -42,6 +42,7 @@ public class GameMaster : MonoBehaviour
     {
         Debug.Log("TODO :Add waiting for spawn sound!");
         yield return new WaitForSeconds(spawnDelay);
+        SoundManager.PlaySound("Respawn");
         Instantiate(playerPrefab, spawnPoint.position, spawnPoint.rotation);
         Debug.Log("TODO: Add spawn particles!");
         GameObject.FindGameObjectWithTag("MainCamera").GetComponentInChildren<CinemachineVirtualCamera>().Follow = GameObject.FindGameObjectWithTag("Player").transform;
