@@ -5278,6 +5278,16 @@ Prefab:
       propertyPath: m_Size.x
       value: 1.1450119
       objectReference: {fileID: 0}
+    - target: {fileID: 114982147327179434, guid: ce3b7f0e322ca854285456be6dd76e22,
+        type: 2}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 786650296}
+    - target: {fileID: 114192951146371044, guid: ce3b7f0e322ca854285456be6dd76e22,
+        type: 2}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 786650296}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce3b7f0e322ca854285456be6dd76e22, type: 2}
   m_IsPrefabAsset: 0

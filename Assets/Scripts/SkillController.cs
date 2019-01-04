@@ -73,10 +73,11 @@ public class SkillController : MonoBehaviour
                 if (enumerator != null)
                     StopCoroutine(enumerator);
                 StartCoroutine(resetSpellCoroutine(a));
+                animator.SetBool("IsCasting", false);
                 break;
             }
         }
-        animator.SetBool("IsCasting", false);
+        
     }
 
     public void activateSpell(string spellString)
