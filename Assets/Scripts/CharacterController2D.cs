@@ -46,7 +46,7 @@ public class CharacterController2D : MonoBehaviour
         Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheck.position, groundRadius, whatIsGround);
         for (int i = 0; i < colliders.Length; i++)
         {
-            if (colliders[i].gameObject != gameObject && colliders[i].gameObject.tag != "Enemy")
+            if (colliders[i].gameObject != gameObject && colliders[i].gameObject.tag != "Enemy" && colliders[i].gameObject.name != "Background")
             {
                 //Debug.Log(colliders[i].gameObject.name);
 
