@@ -35,10 +35,13 @@ public class EnemyAI : MonoBehaviour {
 
     private void Update()
     {
-        playerPosition = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>().position;
-        playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().Health;
+        if (GameObject.FindGameObjectWithTag("Player") != null)
+        {
+            playerPosition = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>().position;
+            playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().Health;
 
-        DetectPlayer();
+            DetectPlayer();
+        }
 
         CheckDie();
 
@@ -134,6 +137,7 @@ public class EnemyAI : MonoBehaviour {
         if (playerHealth > 0 && playerHealth <= 100)
         {
             GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().DamageToPlayer((int)(UnityEngine.Random.Range(0.75f, 1f) * damage));
+            SoundManager.PlaySound("OrcHit");
         }
     }
 
