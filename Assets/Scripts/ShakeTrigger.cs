@@ -12,7 +12,7 @@ public class ShakeTrigger : MonoBehaviour {
     {
         if (Input.GetMouseButtonDown(0))
         {
-            StartCoroutine(cameraShake.Shake(.15f, .1f));
+            //StartCoroutine(cameraShake.Shake(.15f, .1f));
 
         }
     }

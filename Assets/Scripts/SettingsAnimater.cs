@@ -21,7 +21,7 @@ public class SettingsAnimater : MonoBehaviour {
     public void MainMenuClicked()
     {
         Time.timeScale = 1f;
-        //SceneManager.LoadScene("MapScene");
+        SceneManager.LoadScene("MapScene");
     }
 
     private IEnumerator WaitForAnimation(float fl, Animator ani)
