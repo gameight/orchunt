@@ -7,6 +7,7 @@ public class FollowBehaviour : StateMachineBehaviour
     private Vector2 playerPosition;
     private float stoppingDistance;
     private float runSpeed;
+    private float enemyHealth;
 
     private void GetValues(Animator animator)
     {
@@ -14,6 +15,7 @@ public class FollowBehaviour : StateMachineBehaviour
 
         stoppingDistance = animator.GetComponent<EnemyAI>().stoppingDistance;
         runSpeed = animator.GetComponent<EnemyAI>().runSpeed;
+        enemyHealth = animator.GetComponent<EnemyAI>().health;
     }
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
@@ -27,7 +29,7 @@ public class FollowBehaviour : StateMachineBehaviour
     {
         GetValues(animator);
 
-        if (Vector2.Distance(animator.transform.position, playerPosition) > stoppingDistance)
+        if (Vector2.Distance(animator.transform.position, playerPosition) > stoppingDistance && enemyHealth > 0)
         {
             animator.transform.position = Vector2.MoveTowards(animator.transform.position, new Vector2(playerPosition.x, animator.transform.position.y), runSpeed * Time.deltaTime);
         }
