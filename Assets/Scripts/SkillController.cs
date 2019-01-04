@@ -50,6 +50,7 @@ public class SkillController : MonoBehaviour
         spell[a] = Instantiate(Resources.Load(spellString)) as GameObject;
         spell[a].transform.SetParent(rina[0].transform);
         spell[a].GetComponentInChildren<ParticleSystemRenderer>().enabled = false;
+        spell[a].GetComponentInChildren<ParticleSystemRenderer>().sortingOrder = 5;
         var coll = spell[a].GetComponentInChildren<ParticleSystem>().collision;
         coll.enabled = false;
         spell[a].name = spell[a].name.Replace("(Clone)", "");
