@@ -134,7 +134,6 @@ public class EnemyAI : MonoBehaviour {
         if (playerHealth > 0 && playerHealth <= 100)
         {
             GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().DamageToPlayer((int)(UnityEngine.Random.Range(0.75f, 1f) * damage));
-            SoundManager.PlaySound("OrcHit");
         }
     }
 
