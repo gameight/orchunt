@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour {
 
-    public static AudioClip rinaHurtSound, jumpSound, skillSound, levelSound, gameOverSound,mapSound;
+    public static AudioClip rinaHurtSound, jumpSound, skillSound, levelSound, gameOverSound,mapSound,respawnSound,orcHitSound;
     static AudioSource Audiosrc;
 
 
@@ -20,6 +20,9 @@ public class SoundManager : MonoBehaviour {
         gameOverSound = Resources.Load<AudioClip>("GameOver");
         mapSound = Resources.Load<AudioClip>("MenuBackground");
         Audiosrc = GetComponent<AudioSource>();
+        respawnSound = Resources.Load<AudioClip>("Respawn");
+        orcHitSound = Resources.Load<AudioClip>("OrcHit");
+
 
 
 
@@ -53,6 +56,12 @@ public class SoundManager : MonoBehaviour {
                 Audiosrc.PlayOneShot(gameOverSound);
                 break;
             case "MenuBackground":
+                Audiosrc.PlayOneShot(mapSound);
+                break;
+            case "OrcHit":
+                Audiosrc.PlayOneShot(mapSound);
+                break;
+            case "Respawn":
                 Audiosrc.PlayOneShot(mapSound);
                 break;
 
