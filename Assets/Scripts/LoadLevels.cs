@@ -8,7 +8,6 @@ public class LoadLevels : MonoBehaviour {
 
     void Start()
     {
-        SoundManager.PlaySound("MenuBackground");
     }
 
   
@@ -20,8 +19,9 @@ public class LoadLevels : MonoBehaviour {
     [SerializeField]
     public void LoadLevel(int levelID){
         Debug.Log("hfghgfhfg");
+        SoundManager.PlaySound("LevelBackground");
 
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("Level" + levelID);
         
     }
 

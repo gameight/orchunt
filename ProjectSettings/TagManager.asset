@@ -16,6 +16,7 @@ TagManager:
   - ToxicCloud
   - Mystery
   - Boss
+  - GM
   layers:
   - Default
   - TransparentFX
@@ -26,7 +27,7 @@ TagManager:
   - 
   - 
   - Player
-  - 
+  - Background
   - 
   - 
   - 

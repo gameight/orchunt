@@ -7,14 +7,18 @@ public class StartScreenController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        SoundManager.PlaySound("MenuBackground"); 
+        
 		
 	}
 	
 	// Update is called once per frame
 	void Update () {
+        if(SceneManager.GetActiveScene().name =="StartScene"){
+            SoundManager.PlaySound("MenuBackground");
+        }
         if (GameObject.Find("SaveSystem").GetComponent<SaveSystem>().loaded && Input.GetMouseButtonDown(0)) {
-            SceneManager.LoadScene("GameOverTest");
+            //SoundManager.PlaySound("MenuBackground");
+            SceneManager.LoadScene("MapScene");
         }
 
     }

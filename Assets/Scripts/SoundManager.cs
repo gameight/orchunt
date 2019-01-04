@@ -11,16 +11,16 @@ public class SoundManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
+        DontDestroyOnLoad(this);
         rinaHurtSound = Resources.Load<AudioClip>("rinahurt");
         jumpSound = Resources.Load<AudioClip>("Jump");
         skillSound = Resources.Load<AudioClip>("Skill");
         levelSound = Resources.Load<AudioClip>("LevelBackground");
         gameOverSound = Resources.Load<AudioClip>("GameOver");
         mapSound = Resources.Load<AudioClip>("MenuBackground");
-
-
         Audiosrc = GetComponent<AudioSource>();
-        SoundManager.PlaySound("LevelBackground");
+
 
 
 	}
@@ -33,7 +33,8 @@ public class SoundManager : MonoBehaviour {
     public static void PlaySound (string clip){
 
         switch(clip){
-            case "rinahurt" : Audiosrc.PlayOneShot(rinaHurtSound);
+            case "rinahurt" : 
+                Audiosrc.PlayOneShot(rinaHurtSound);
                 break;
             case "Jump":
                 Debug.Log("ses çalındı." + jumpSound.samples);
@@ -44,12 +45,18 @@ public class SoundManager : MonoBehaviour {
                 Audiosrc.PlayOneShot(skillSound);
                 break;
             case "LevelBackground":
+                Audiosrc.Stop();
                 Audiosrc.PlayOneShot(levelSound);
                 break;
             case "GameOver":
                 Audiosrc.Stop();
                 Audiosrc.PlayOneShot(gameOverSound);
                 break;
+            case "MenuBackground":
+                Audiosrc.PlayOneShot(mapSound);
+                break;
+
+                
         }
 
     }

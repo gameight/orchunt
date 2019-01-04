@@ -32,6 +32,7 @@ public class MobileButtonsScript : MonoBehaviour {
     {
         Debug.Log("jump");
         PlayerMovement.jump = true;
+        SoundManager.PlaySound("Jump");
     }
 
     public void Update()
