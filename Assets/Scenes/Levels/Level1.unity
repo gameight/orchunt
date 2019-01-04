@@ -20468,41 +20468,41 @@ Prefab:
         type: 2}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1772385957}
+      objectReference: {fileID: 1772385958}
     - target: {fileID: 114553744664270092, guid: f1972cf07d0afd74388ff29b085256c0,
         type: 2}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: leftButtonClicked
+      value: buttonRelease
       objectReference: {fileID: 0}
     - target: {fileID: 114553744664270092, guid: f1972cf07d0afd74388ff29b085256c0,
         type: 2}
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1772385957}
+      objectReference: {fileID: 1772385958}
     - target: {fileID: 114553744664270092, guid: f1972cf07d0afd74388ff29b085256c0,
         type: 2}
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: buttonRelease
+      value: leftButtonClicked
       objectReference: {fileID: 0}
     - target: {fileID: 114581105274542156, guid: f1972cf07d0afd74388ff29b085256c0,
         type: 2}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1772385957}
+      objectReference: {fileID: 1772385958}
     - target: {fileID: 114581105274542156, guid: f1972cf07d0afd74388ff29b085256c0,
         type: 2}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: rightButtonClicked
+      value: buttonRelease
       objectReference: {fileID: 0}
     - target: {fileID: 114581105274542156, guid: f1972cf07d0afd74388ff29b085256c0,
         type: 2}
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1772385957}
+      objectReference: {fileID: 1772385958}
     - target: {fileID: 114581105274542156, guid: f1972cf07d0afd74388ff29b085256c0,
         type: 2}
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: buttonRelease
+      value: rightButtonClicked
       objectReference: {fileID: 0}
     - target: {fileID: 224593094798645382, guid: f1972cf07d0afd74388ff29b085256c0,
         type: 2}
@@ -20952,6 +20952,11 @@ Prefab:
       propertyPath: m_AnchoredPosition.y
       value: -0.3999939
       objectReference: {fileID: 0}
+    - target: {fileID: 223360552791515936, guid: f1972cf07d0afd74388ff29b085256c0,
+        type: 2}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1959935013}
     m_RemovedComponents:
     - {fileID: 114387964632194452, guid: f1972cf07d0afd74388ff29b085256c0, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: f1972cf07d0afd74388ff29b085256c0, type: 2}
@@ -20972,6 +20977,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c66f436bf8116e498476b98e09018a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1772385958 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114423175198570240, guid: f1972cf07d0afd74388ff29b085256c0,
+    type: 2}
+  m_PrefabInternal: {fileID: 1772385955}
+  m_Script: {fileID: 11500000, guid: 6c66f436bf8116e498476b98e09018a1, type: 3}
 --- !u!1 &1781320018
 GameObject:
   m_ObjectHideFlags: 0
@@ -22875,11 +22886,11 @@ Prefab:
       objectReference: {fileID: 1676322248}
     - target: {fileID: 4364525473189350, guid: 0b25adbc49c0ad84db483380dc7765d3, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0.17960085
+      value: 79.546
       objectReference: {fileID: 0}
     - target: {fileID: 4364525473189350, guid: 0b25adbc49c0ad84db483380dc7765d3, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -8.770353
+      value: -7.853305
       objectReference: {fileID: 0}
     - target: {fileID: 4235235445755656, guid: 0b25adbc49c0ad84db483380dc7765d3, type: 2}
       propertyPath: m_LocalPosition.x
@@ -22892,11 +22903,11 @@ Prefab:
     - target: {fileID: 20133748639804168, guid: 0b25adbc49c0ad84db483380dc7765d3,
         type: 2}
       propertyPath: orthographic size
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4364525473189350, guid: 0b25adbc49c0ad84db483380dc7765d3, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 8.132173
+      value: -0.2046341
       objectReference: {fileID: 0}
     - target: {fileID: 4235235445755656, guid: 0b25adbc49c0ad84db483380dc7765d3, type: 2}
       propertyPath: m_LocalPosition.z
@@ -22905,6 +22916,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b25adbc49c0ad84db483380dc7765d3, type: 2}
   m_IsPrefabAsset: 0
+--- !u!20 &1959935013 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 20133748639804168, guid: 0b25adbc49c0ad84db483380dc7765d3,
+    type: 2}
+  m_PrefabInternal: {fileID: 1959935012}
 --- !u!1 &1966766763
 GameObject:
   m_ObjectHideFlags: 0
