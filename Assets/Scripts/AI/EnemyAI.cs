@@ -14,6 +14,7 @@ public class EnemyAI : MonoBehaviour {
     public float perceptionDistance = 10f;
     public float stoppingDistance = 0f;
     public float damage = 15f;
+    public bool effected = false; // check if orc effected by any skill (ice, fire, poison)
 
     //public bool die = false;
    
@@ -121,7 +122,7 @@ public class EnemyAI : MonoBehaviour {
         {
             isDying = true;
 			if (this.name.Contains("Boss"))
-				AllSpellsController.setSpellsBools(this.name, SceneManager.GetActiveScene().name);
+				AllSpellsController.setSpellsBools(this.name, SceneManager.GetActiveScene().name); //When a boss die activate new skill
             animator.SetBool("IsDying", true);
         }
 

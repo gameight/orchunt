@@ -14587,6 +14587,11 @@ Prefab:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1289034448}
+    - target: {fileID: 224699489980283892, guid: f1972cf07d0afd74388ff29b085256c0,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.9999924
+      objectReference: {fileID: 0}
     - target: {fileID: 114489350931376608, guid: f1972cf07d0afd74388ff29b085256c0,
         type: 2}
       propertyPath: m_havePropertiesChanged
@@ -14596,11 +14601,6 @@ Prefab:
         type: 2}
       propertyPath: m_isInputParsingRequired
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224699489980283892, guid: f1972cf07d0afd74388ff29b085256c0,
-        type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: -0.9999924
       objectReference: {fileID: 0}
     - target: {fileID: 224328909024563568, guid: f1972cf07d0afd74388ff29b085256c0,
         type: 2}

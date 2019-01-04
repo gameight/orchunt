@@ -13860,6 +13860,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1428777755744094, guid: 902daac4d67df8d499dcde3eff641c2f, type: 2}
+      propertyPath: m_Name
+      value: Boss
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 902daac4d67df8d499dcde3eff641c2f, type: 2}
   m_IsPrefabAsset: 0
@@ -41845,6 +41849,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1309294762256904, guid: c0be0496e7fbbad439c7d44ca0ae7401, type: 2}
+      propertyPath: m_Name
+      value: SecretLevelBoss
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0be0496e7fbbad439c7d44ca0ae7401, type: 2}
   m_IsPrefabAsset: 0
@@ -67821,6 +67829,16 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: jumpButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 224328909024563568, guid: f1972cf07d0afd74388ff29b085256c0,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -2.7999992
+      objectReference: {fileID: 0}
+    - target: {fileID: 224699489980283892, guid: f1972cf07d0afd74388ff29b085256c0,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.9999924
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114299148316691518, guid: f1972cf07d0afd74388ff29b085256c0, type: 2}

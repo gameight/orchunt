@@ -5522,7 +5522,7 @@ Prefab:
     - target: {fileID: 224328909024563568, guid: f1972cf07d0afd74388ff29b085256c0,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -2.7999997
+      value: -2.7999992
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114299148316691518, guid: f1972cf07d0afd74388ff29b085256c0, type: 2}
@@ -6716,7 +6716,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1428777755744094, guid: 902daac4d67df8d499dcde3eff641c2f, type: 2}
       propertyPath: m_Name
-      value: Troll3 (1)
+      value: Boss
       objectReference: {fileID: 0}
     - target: {fileID: 4664233920326708, guid: 902daac4d67df8d499dcde3eff641c2f, type: 2}
       propertyPath: m_LocalScale.x
@@ -91032,6 +91032,10 @@ Prefab:
     - target: {fileID: 4664233920326708, guid: 902daac4d67df8d499dcde3eff641c2f, type: 2}
       propertyPath: m_LocalScale.y
       value: 1.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1428777755744094, guid: 902daac4d67df8d499dcde3eff641c2f, type: 2}
+      propertyPath: m_Name
+      value: SecretLevelBoss
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 902daac4d67df8d499dcde3eff641c2f, type: 2}
