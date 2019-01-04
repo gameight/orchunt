@@ -47,9 +47,16 @@ public class GameMaster : MonoBehaviour
         Debug.Log("TODO: Add spawn particles!");
         GameObject.FindGameObjectWithTag("MainCamera").GetComponentInChildren<CinemachineVirtualCamera>().Follow = GameObject.FindGameObjectWithTag("Player").transform;
 
+        GameObject.FindGameObjectWithTag("Player").GetComponent<SpriteRenderer>().flipX = true;
     }
+
+    
+
     public static void KillPlayer(Player player)
     {
+        //player.animator.SetFloat("Health", -1);
+
+        //gm.StartCoroutine(gm.WaitForDieAnimation());
 
         Destroy(player.gameObject);
         PlayerData.Instance.remainingLive -= 1;

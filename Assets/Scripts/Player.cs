@@ -59,14 +59,23 @@ public class Player : MonoBehaviour
 
             //TODO : It needs to wait until animations over.!!
             animator.SetFloat("Health", health);
+
+            StartCoroutine(WaitForDieAnimation());
             
-            GameMaster.KillPlayer(this);
+            
         }
     }
 
-    
+    IEnumerator WaitForDieAnimation()
+    {
+        yield return new WaitForSeconds(1.5f);
 
-    
+        GameMaster.KillPlayer(this);
+    }
+
+
+
+
 
 
 }
