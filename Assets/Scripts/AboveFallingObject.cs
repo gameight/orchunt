@@ -5,15 +5,22 @@ using UnityEngine;
 public class AboveFallingObject : MonoBehaviour {
     Rigidbody2D rb;
     public GameObject RockEffect;
+    [SerializeField] int Damage = 5;
+
     private void Start()
 
     {
         rb = GetComponent<Rigidbody2D>();
     }
+
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag.Equals("Player"))
+        if (collision.gameObject.tag.Equals("Player")) { 
             rb.isKinematic = false;
+            Debug.Log("Trap damage");
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().DamageToPlayer(Damage);
+    }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {

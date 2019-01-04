@@ -9,7 +9,7 @@ public class Pendulum : MonoBehaviour
     public float leftPushRange;
     public float rightPushRange;
     public float velocityThreshold;
-
+    [SerializeField] int Damage = 5;
 
 
     // Use this for initialization
@@ -23,6 +23,14 @@ public class Pendulum : MonoBehaviour
     void Update()
     {
         Push();
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            Debug.Log("Trap damage");
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().DamageToPlayer(Damage);
+        }
     }
 
     public void Push()

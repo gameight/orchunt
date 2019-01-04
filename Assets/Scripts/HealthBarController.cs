@@ -22,7 +22,7 @@ public class HealthBarController : MonoBehaviour
         if (rina != null)
         {
             healthBar.fillAmount = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().Health / maxHealth;
-            //Debug.Log(GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().Health);
+            Debug.Log(GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().Health);
         }
         else
         {
