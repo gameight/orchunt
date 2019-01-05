@@ -141,7 +141,8 @@ MonoBehaviour:
   patrolMax: 5
   perceptionDistance: 10
   stoppingDistance: 0.01
-  damage: 20
+  damage: 30
+  effected: 0
   startPosition: {x: 0, y: 0}
   facingRight: 1
 --- !u!212 &212016712757214636

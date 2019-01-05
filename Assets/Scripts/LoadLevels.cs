@@ -18,11 +18,11 @@ public class LoadLevels : MonoBehaviour {
 	}
     [SerializeField]
     public void LoadLevel(int levelID){
-        Debug.Log("hfghgfhfg");
+        
         SoundManager.PlaySound("LevelBackground");
 
-        SceneManager.LoadScene("Level" + levelID);
-        
+        //SceneManager.LoadScene("Level" + levelID);
+        SceneManager.LoadSceneAsync("Level" + levelID);        
     }
 
 }
