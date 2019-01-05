@@ -5,7 +5,7 @@ using UnityEngine;
 public class SoundManager : MonoBehaviour {
 
     public static AudioClip rinaHurtSound, jumpSound, skillSound, levelSound, gameOverSound,mapSound,orcHitSound,respawnSound;
-    static AudioSource Audiosrc;
+    public static AudioSource Audiosrc;
 
 
 
