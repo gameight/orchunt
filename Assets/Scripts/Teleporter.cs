@@ -10,13 +10,13 @@ public class Teleporter : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Player" || collision.gameObject.name == "Rina(Clone)")
         {
-            StartCoroutine(Teleport());
+            StartCoroutine(Teleport(collision.gameObject));
         }
         
     }
-    IEnumerator Teleport()
+    IEnumerator Teleport(GameObject player)
     {
         yield return new WaitForSeconds(1);
-        Player.transform.position = new Vector2(Portal.transform.position.x, Portal.transform.position.y);
+        player.transform.position = new Vector2(Portal.transform.position.x, Portal.transform.position.y);
     }
 }
