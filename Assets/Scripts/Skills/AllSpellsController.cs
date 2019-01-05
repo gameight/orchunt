@@ -32,25 +32,28 @@ public class AllSpellsController : MonoBehaviour {
         {
             case "Level1":
                 if (isSecretLevelBoss)
-                    PlayerData.Instance.EarnedSpells[2] = true;
+                    SaveSystem.playerData.earnedSpells[2] = true;
                 break;
             case "Level2":
                 if (isSecretLevelBoss)
-                    PlayerData.Instance.EarnedSpells[3] = true;
+                    SaveSystem.playerData.earnedSpells[3] = true;
                 else
-                    PlayerData.Instance.EarnedSpells[4] = true;
+                    SaveSystem.playerData.earnedSpells[4] = true;
                 break;
             case "Level3":
                 if (isSecretLevelBoss)
-                    PlayerData.Instance.EarnedSpells[5] = true;
+                    SaveSystem.playerData.earnedSpells[5] = true;
                 else
-                    PlayerData.Instance.EarnedSpells[6] = true;
+                    SaveSystem.playerData.earnedSpells[6] = true;
                 break;
             case "Level4":
                 if (isSecretLevelBoss)
-                    PlayerData.Instance.EarnedSpells[7] = true;
+                    SaveSystem.playerData.earnedSpells[7] = true;
                 break;
         }
+
+        SaveSystem.Save();
+
         GameObject.Find("SkillsMenu").GetComponent<SkillsMenuConroller>().OnButtonClick();
     }
 }

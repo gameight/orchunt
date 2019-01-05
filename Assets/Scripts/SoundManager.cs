@@ -23,7 +23,7 @@ public class SoundManager : MonoBehaviour {
         respawnSound = Resources.Load<AudioClip>("Respawn");
         Audiosrc = GetComponent<AudioSource>();
 
-        Audiosrc.volume = PlayerData.Instance.Sound;
+        Audiosrc.volume = SaveSystem.playerData.sound;
 
 	}
 	
@@ -34,7 +34,7 @@ public class SoundManager : MonoBehaviour {
 
     public static void PlaySound (string clip){
 
-        Audiosrc.volume = PlayerData.Instance.Sound;
+        Audiosrc.volume = SaveSystem.playerData.sound;
 
         switch(clip){
             case "rinahurt" : 

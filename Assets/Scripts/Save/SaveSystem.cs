@@ -19,23 +19,21 @@ public class SaveSystem : MonoBehaviour {
 	
     public static void Save()
     {
-        Debug.Log("Data " + PlayerData.Instance.Level);
-        PlayerPrefs.SetString("orchunt_data111", JsonUtility.ToJson(PlayerData.Instance));
-        //Debug.Log("Data Kaydedildi"+PlayerData.Instance.Level + " " + PlayerData.Instance.RemainingLive);
+        PlayerPrefs.SetString("orchunt_data_1646", JsonUtility.ToJson(playerData));
+        Debug.Log("Data Kaydedildi Level: " + playerData.level);
     }
 
     public void Load()
     {
-        
-        string json = PlayerPrefs.GetString("orchunt_data111");
+        string json = PlayerPrefs.GetString("orchunt_data_1646");
 
-        Debug.Log(json);
+        Debug.Log("Loaded Data: " + json);
 
         if (json.Length > 0) {
             PlayerData pd = JsonUtility.FromJson<PlayerData>(json);
-            PlayerData.Instance.UpdatePlayerData(pd);
+            playerData.UpdatePlayerData(pd);
 
-            Debug.Log("level = " + PlayerData.Instance.Level + " " + "remaining lives= " + PlayerData.Instance.RemainingLive);
+            //Debug.Log("level = " + SaveSystem.playerData.level + " " + "remaining lives= " + SaveSystem.playerData.remainingLive);
         } 
         else
         {
@@ -43,16 +41,15 @@ public class SaveSystem : MonoBehaviour {
         }
 
         loaded = true;
-
     }
 
     public void DefaultPlayerData()
     {
-        PlayerData.Instance.Level = 1;
-        PlayerData.Instance.RemainingLive = 3;
-        PlayerData.Instance.ActiveSpells = new List<string>() { "Light","Cosmic"};
-        PlayerData.Instance.EarnedSpells = new List<bool>() { true, true, false, false, false, false, false, false};
-        PlayerData.Instance.Sound = 1f;
+        playerData.level = 1;
+        playerData.remainingLive = 3;
+        playerData.activeSpells = new List<string>() { "Light","Cosmic"};
+        playerData.earnedSpells = new List<bool>() { true, true, false, false, false, false, false, false};
+        playerData.sound = 1f;
 
         Save();
     }

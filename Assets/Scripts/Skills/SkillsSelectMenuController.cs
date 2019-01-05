@@ -21,9 +21,9 @@ public class SkillsSelectMenuController : MonoBehaviour {
         animator = GameObject.Find("SkillsMenu").GetComponent<Animator>();
         selectedSkills = new List<GameObject>();
 
-        for(int i=0; i< PlayerData.Instance.EarnedSpells.Capacity; i++)
+        for(int i=0; i< SaveSystem.playerData.earnedSpells.Capacity; i++)
         {
-            if (PlayerData.Instance.EarnedSpells[i] == false)
+            if (SaveSystem.playerData.earnedSpells[i] == false)
             {
                 GameObject.Find("Skill" + (i+1)).GetComponent<Image>().color = newColor;
             }
@@ -61,8 +61,9 @@ public class SkillsSelectMenuController : MonoBehaviour {
             selected1.sprite = selectedSkills[0].transform.Find("Mask").GetChild(0).GetComponent<Image>().sprite;
             selected2.sprite = selectedSkills[1].transform.Find("Mask").GetChild(0).GetComponent<Image>().sprite;
 
-            PlayerData.Instance.ActiveSpells[0] = selected1.transform.parent.parent.name;
-            PlayerData.Instance.ActiveSpells[1] = selected2.transform.parent.parent.name;
+            SaveSystem.playerData.activeSpells[0] = selected1.transform.parent.parent.name;
+            SaveSystem.playerData.activeSpells[1] = selected2.transform.parent.parent.name;
+            SaveSystem.Save();
         }
 
         closeSkillMenu();
@@ -79,7 +80,7 @@ public class SkillsSelectMenuController : MonoBehaviour {
         string st = gameObject.transform.parent.name;
         int a = int.Parse(st.Substring(st.Length - 1, 1));
 
-        if (PlayerData.Instance.EarnedSpells[a - 1]) { 
+        if (SaveSystem.playerData.earnedSpells[a - 1]) { 
 
             if (!selectedSkills.Contains(gameObject))
             {

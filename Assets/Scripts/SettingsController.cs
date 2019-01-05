@@ -9,13 +9,14 @@ public class SettingsController : MonoBehaviour {
 
     private void Start()
     {
-        audioMixerMaster.SetFloat("Volume", PlayerData.Instance.Sound);
+        audioMixerMaster.SetFloat("Volume", SaveSystem.playerData.sound);
     }
 
     public void setMasterVolume(float volume)
     {
+        Debug.Log(volume);
         audioMixerMaster.SetFloat("Volume", volume);
-        PlayerData.Instance.Sound = volume;
-
+        SaveSystem.playerData.sound = volume;
+        SaveSystem.Save();
     }
 }

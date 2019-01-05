@@ -59,9 +59,10 @@ public class GameMaster : MonoBehaviour
 		CharacterController2D.m_FacingRight = true;
 
         Destroy(player.gameObject);
-        PlayerData.Instance.RemainingLive -= 1;
+        SaveSystem.playerData.remainingLive -= 1;
+        SaveSystem.Save();
         //_remainingLives -= 1;
-        if (PlayerData.Instance.RemainingLive <= 0)
+        if (SaveSystem.playerData.remainingLive <= 0)
         {
             gm.EndGame();
         }
