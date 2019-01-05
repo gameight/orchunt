@@ -18,7 +18,7 @@ public class SkillButtonController : MonoBehaviour
 
     IEnumerator cooldownSkill(string spellString)
     {
-        yield return new WaitForSeconds(2.1f);
+        yield return new WaitForSeconds(1.6f);
         GameObject[] button = GameObject.FindGameObjectsWithTag(spellString);
         button[0].GetComponent<Button>().interactable = true;
     }

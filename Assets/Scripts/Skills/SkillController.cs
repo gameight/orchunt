@@ -146,7 +146,7 @@ public class SkillController : MonoBehaviour
     IEnumerator resetSpellCoroutineWithTime(string spellString) // If spell didnt collide with anything for 3 seconds, reset the spell
     {
         Debug.Log("resetSpellCoroutineWithTime:" + spellString);
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1.5f);
         resetSpell(spellString);
     }
     

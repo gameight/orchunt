@@ -23,7 +23,12 @@ public class SettingsAnimater : MonoBehaviour {
         Time.timeScale = 1f;
         SoundManager.PlaySound("MenuBackground");
         SceneManager.LoadScene("MapScene");
+    }
 
+    public void RestartClicked()
+    {
+        //Debug.Log("Restarting...");
+        //Time.timeScale = 1f;
     }
 
     private IEnumerator WaitForAnimation(float fl, Animator ani)

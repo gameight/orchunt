@@ -17,6 +17,7 @@ TagManager:
   - Mystery
   - Boss
   - GM
+  - Slider
   layers:
   - Default
   - TransparentFX

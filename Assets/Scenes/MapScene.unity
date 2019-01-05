@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 16501704}
   m_Layer: 5
   m_Name: MasterSlider
-  m_TagString: Untagged
+  m_TagString: Slider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -326,10 +326,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 65132572}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6fd8e0a25db90bb459de24177cd1da83, type: 3}
+  m_Script: {fileID: 11500000, guid: e96a8bfbf1cca4abe8e3a64e3ab15306, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   audioMixerMaster: {fileID: 24100000, guid: cc4eb45365c28e243bc6a7fdeb90a5fb, type: 2}
+  slider: {fileID: 16501702}
 --- !u!114 &65132575
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5163,7 +5164,7 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1909106332}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
