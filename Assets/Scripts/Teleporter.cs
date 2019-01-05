@@ -8,10 +8,11 @@ public class Teleporter : MonoBehaviour {
     public GameObject Player;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player" || collision.gameObject.name == "Rina(Clone)")
         {
             StartCoroutine(Teleport());
         }
+        
     }
     IEnumerator Teleport()
     {
