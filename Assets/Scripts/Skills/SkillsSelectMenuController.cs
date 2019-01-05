@@ -34,8 +34,16 @@ public class SkillsSelectMenuController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        for (int i = 0; i < SaveSystem.playerData.earnedSpells.Capacity; i++)
+        {
+            if (SaveSystem.playerData.earnedSpells[i] == false)
+            {
+                GameObject.Find("Skill" + (i + 1)).GetComponent<Image>().color = newColor;
+            }
+        }
+
+
+    }
 
     public void skillButtonClicked(GameObject gameObject)
     {
