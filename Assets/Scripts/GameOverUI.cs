@@ -15,8 +15,13 @@ public class GameOverUI : MonoBehaviour
     }
     public void Retry()
     {
-      
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); 
+        SaveSystem.playerData.remainingLive = 3;
+        SaveSystem.playerData.level = 1;
+        SaveSystem.playerData.activeSpells[0] = "Light";
+        SaveSystem.playerData.activeSpells[1] = "Cosmic";
+        SaveSystem.playerData.earnedSpells = new List<bool>() { true, true, false, false, false, false, false, false };
+        SaveSystem.Save();
+        SceneManager.LoadScene("MapScene"); 
 
     }
 
