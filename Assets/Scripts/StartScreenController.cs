@@ -5,19 +5,23 @@ using UnityEngine.SceneManagement;
 
 public class StartScreenController : MonoBehaviour {
 
+
+
 	// Use this for initialization
 	void Start () {
-        
+     
 		
 	}
 	
 	// Update is called once per frame
-	void Update () {
-        if(SceneManager.GetActiveScene().name =="StartScene"){
-            SoundManager.PlaySound("MenuBackground");
+    void Update () {
+        if (SceneManager.GetActiveScene().name == "StartScene")
+        {
+            SoundManager.PlaySound("Start");
         }
+      
         if (GameObject.Find("SaveSystem").GetComponent<SaveSystem>().loaded && Input.GetMouseButtonDown(0)) {
-            //SoundManager.PlaySound("MenuBackground");
+         
             SceneManager.LoadScene("MapScene");
         }
 

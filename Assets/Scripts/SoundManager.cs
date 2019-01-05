@@ -55,6 +55,7 @@ public class SoundManager : MonoBehaviour {
                 Audiosrc.PlayOneShot(gameOverSound);
                 break;
             case "MenuBackground":
+                Audiosrc.Stop();
                 Audiosrc.PlayOneShot(mapSound);
                 break;
             case "OrcHit":
@@ -64,6 +65,10 @@ public class SoundManager : MonoBehaviour {
             case "Respawn":
                 Audiosrc.PlayOneShot(respawnSound);
                 break;
+            case "Start":
+                Audiosrc.PlayOneShot(mapSound);
+                break;
+
 
 
                 
