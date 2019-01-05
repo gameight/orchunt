@@ -19,7 +19,7 @@ public class AboveFallingObject : MonoBehaviour {
         if (collision.gameObject.tag.Equals("Player")) { 
             rb.isKinematic = false;
             Debug.Log("Trap damage");
-            GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().DamageToPlayer(Damage);
+       
     }
     }
     private void OnCollisionEnter2D(Collision2D collision)
