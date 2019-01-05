@@ -46,10 +46,10 @@ public class SaveSystem : MonoBehaviour {
     public void DefaultPlayerData()
     {
         playerData.level = 1;
-        playerData.remainingLive = 3;
+        playerData.remainingLive = 5;
         playerData.activeSpells = new List<string>() { "Light","Cosmic"};
         playerData.earnedSpells = new List<bool>() { true, true, false, false, false, false, false, false};
-        playerData.sound = -5f;
+        playerData.sound = 1f;
 
         Save();
     }

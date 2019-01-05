@@ -15,7 +15,7 @@ public class GameOverUI : MonoBehaviour
     }
     public void Retry()
     {
-        SaveSystem.playerData.remainingLive = 3;
+        SaveSystem.playerData.remainingLive = 5;
         SaveSystem.playerData.level = 1;
         SaveSystem.playerData.activeSpells[0] = "Light";
         SaveSystem.playerData.activeSpells[1] = "Cosmic";
