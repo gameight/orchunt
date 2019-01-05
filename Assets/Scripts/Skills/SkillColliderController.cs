@@ -15,7 +15,7 @@ public class SkillColliderController : MonoBehaviour
 
     private void OnParticleCollision(GameObject other)
     {
-        if (other.gameObject.name != "Backgrounds" && other.gameObject.name != "Background")
+        if (other.gameObject.name == "Backgrounds" && other.gameObject.name == "Background")
             return;
         Debug.Log("Collision");
         if (other.gameObject.tag == "Enemy")

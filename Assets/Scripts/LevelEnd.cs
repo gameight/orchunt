@@ -11,7 +11,9 @@ public class LevelEnd : MonoBehaviour
         
             if (bossGameObject != null && other.CompareTag("Player") && bossGameObject.GetComponent<EnemyAI>().health <= 0)
             {
-                SceneManager.LoadScene("MapScene");
+            PlayerData.Instance.Level ++;
+            SceneManager.LoadScene("MapScene");
+
             }
            
        

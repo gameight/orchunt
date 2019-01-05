@@ -5,35 +5,37 @@ using UnityEngine;
 
 public class SaveSystem : MonoBehaviour {
 
+    public static PlayerData playerData;
     public bool loaded;
 
 	// Use this for initialization
 	void Start () {
         DontDestroyOnLoad(this);
 
-        PlayerData pd = new PlayerData();
+        playerData = new PlayerData();
         Load();
     }
 	
 	
-    public void Save()
+    public static void Save()
     {
-        PlayerPrefs.SetString("data1", JsonUtility.ToJson(PlayerData.Instance));
-        Debug.Log("Data Kaydedildi"+PlayerData.Instance.level + " " + PlayerData.Instance.remainingLive);
+        Debug.Log("Data " + PlayerData.Instance.Level);
+        PlayerPrefs.SetString("orchunt_data111", JsonUtility.ToJson(PlayerData.Instance));
+        //Debug.Log("Data Kaydedildi"+PlayerData.Instance.Level + " " + PlayerData.Instance.RemainingLive);
     }
 
     public void Load()
     {
         
-        string json = PlayerPrefs.GetString("data1");
+        string json = PlayerPrefs.GetString("orchunt_data111");
 
-
+        Debug.Log(json);
 
         if (json.Length > 0) {
             PlayerData pd = JsonUtility.FromJson<PlayerData>(json);
             PlayerData.Instance.UpdatePlayerData(pd);
 
-            Debug.Log("level = " + PlayerData.Instance.level + " " + "remaining lives= " + PlayerData.Instance.remainingLive);
+            Debug.Log("level = " + PlayerData.Instance.Level + " " + "remaining lives= " + PlayerData.Instance.RemainingLive);
         } 
         else
         {
@@ -46,12 +48,11 @@ public class SaveSystem : MonoBehaviour {
 
     public void DefaultPlayerData()
     {
-        PlayerData.Instance.level = 1;
-        PlayerData.Instance.remainingLive = 3;
-        PlayerData.Instance.activeSpells = new List<string>() { "Light","Cosmic"};
-        PlayerData.Instance.earnedSpells = new List<string>() ;
-        PlayerData.Instance.music = 1f;
-        PlayerData.Instance.sound = 1f;
+        PlayerData.Instance.Level = 1;
+        PlayerData.Instance.RemainingLive = 3;
+        PlayerData.Instance.ActiveSpells = new List<string>() { "Light","Cosmic"};
+        PlayerData.Instance.EarnedSpells = new List<bool>() { true, true, false, false, false, false, false, false};
+        PlayerData.Instance.Sound = 1f;
 
         Save();
     }

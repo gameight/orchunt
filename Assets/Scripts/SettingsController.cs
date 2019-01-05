@@ -7,8 +7,15 @@ public class SettingsController : MonoBehaviour {
 
     public AudioMixer audioMixerMaster;
 
+    private void Start()
+    {
+        audioMixerMaster.SetFloat("Volume", PlayerData.Instance.Sound);
+    }
+
     public void setMasterVolume(float volume)
     {
         audioMixerMaster.SetFloat("Volume", volume);
+        PlayerData.Instance.Sound = volume;
+
     }
 }

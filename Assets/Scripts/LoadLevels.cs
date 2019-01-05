@@ -3,11 +3,37 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LoadLevels : MonoBehaviour {
 
+
+
     void Start()
+
     {
+        Debug.Log(PlayerData.Instance.Level);
+        switch (PlayerData.Instance.Level)
+        {
+            case 1:
+                GameObject.Find("MapButton2").GetComponent<Button>().interactable = false;
+                GameObject.Find("MapButton3").GetComponent<Button>().interactable = false;
+                GameObject.Find("MapButton4").GetComponent<Button>().interactable = false;
+                break;
+
+            case 2:
+              
+                GameObject.Find("MapButton3").GetComponent<Button>().interactable = false;
+                GameObject.Find("MapButton4").GetComponent<Button>().interactable = false;
+                break;
+            case 3:
+                
+                GameObject.Find("MapButton4").GetComponent<Button>().interactable = false;
+                break;
+        }
+
+
+
     }
 
   
@@ -16,13 +42,19 @@ public class LoadLevels : MonoBehaviour {
 	void Update () {
 		
 	}
+
     [SerializeField]
     public void LoadLevel(int levelID){
-        
-        SoundManager.PlaySound("LevelBackground");
 
-        //SceneManager.LoadScene("Level" + levelID);
-        SceneManager.LoadSceneAsync("Level" + levelID);        
+        if (PlayerData.Instance.Level >= levelID)
+        {
+            SoundManager.PlaySound("LevelBackground");
+
+
+            SceneManager.LoadSceneAsync("Level" + levelID);   
+        }
+
+             
     }
 
 }

@@ -14,7 +14,7 @@ public class AllSpellsController : MonoBehaviour {
      * allSpells[6] = ToxicCloud - 25 Damage - Poison effect (Damage to enemy 5 damage - 3 seconds interval - 10 times) - Unlock by Level3 Final Boss
      * allSpells[7] = FlmaeRing - 30 Damage - Fire effect (Damage to enemy 10 damage - 2 seconds interval - 5 times) - Unlock by Level4 Secret Level Boss
      */
-    public static bool[] allSpells = { true, true, false, false, false, false, false, false };
+    //public static bool[] allSpells = { true, true, false, false, false, false, false, false };
 
     public static void setSpellsBools(string boss, string sceneName)
     {
@@ -32,23 +32,23 @@ public class AllSpellsController : MonoBehaviour {
         {
             case "Level1":
                 if (isSecretLevelBoss)
-                    allSpells[2] = true;
+                    PlayerData.Instance.EarnedSpells[2] = true;
                 break;
             case "Level2":
                 if (isSecretLevelBoss)
-                    allSpells[3] = true;
+                    PlayerData.Instance.EarnedSpells[3] = true;
                 else
-                    allSpells[4] = true;
+                    PlayerData.Instance.EarnedSpells[4] = true;
                 break;
             case "Level3":
                 if (isSecretLevelBoss)
-                    allSpells[5] = true;
+                    PlayerData.Instance.EarnedSpells[5] = true;
                 else
-                    allSpells[6] = true;
+                    PlayerData.Instance.EarnedSpells[6] = true;
                 break;
             case "Level4":
                 if (isSecretLevelBoss)
-                    allSpells[7] = true;
+                    PlayerData.Instance.EarnedSpells[7] = true;
                 break;
         }
         GameObject.Find("SkillsMenu").GetComponent<SkillsMenuConroller>().OnButtonClick();
