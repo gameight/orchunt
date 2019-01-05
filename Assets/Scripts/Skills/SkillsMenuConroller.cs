@@ -27,6 +27,6 @@ public class SkillsMenuConroller : MonoBehaviour {
             animator.SetBool("isOpen", false);
         }
 
-
+        GameObject.Find("Skills").GetComponent<SkillsSelectMenuController>().updateColors();
     }
 }

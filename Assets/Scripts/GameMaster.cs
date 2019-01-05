@@ -44,7 +44,11 @@ public class GameMaster : MonoBehaviour
         SoundManager.PlaySound("LevelBackground");
         Instantiate(playerPrefab, spawnPoint.position, spawnPoint.rotation);
         if (SceneManager.GetActiveScene().name == "Level3")
+        {
             GameObject.FindGameObjectWithTag("Player").transform.localScale = new Vector3(1, 1, 1);
+            GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterController2D>().jumpForce = 800;
+        }
+            
         GameObject.FindGameObjectWithTag("MainCamera").GetComponentInChildren<CinemachineVirtualCamera>().Follow = GameObject.FindGameObjectWithTag("Player").transform;
     }
 

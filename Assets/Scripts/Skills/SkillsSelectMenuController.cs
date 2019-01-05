@@ -41,7 +41,6 @@ public class SkillsSelectMenuController : MonoBehaviour {
     {
         
         Image SkillImage = gameObject.transform.Find("Mask").GetChild(0).GetComponent<Image>();
-
         checkTheList(gameObject);
     }
     
@@ -102,5 +101,21 @@ public class SkillsSelectMenuController : MonoBehaviour {
 
             }
         }
+    }
+
+    public void updateColors()
+    {
+        
+        int a = 1;
+        string st = "SkillsMenuSkillHolders";
+        /*while(a < 9)
+        {
+            string newst = st + a.ToString();
+            Debug.Log("Updating Colors... " + newst);
+            if (SaveSystem.playerData.earnedSpells[a - 1])
+            {
+                GameObject.Find(newst).GetComponentInChildren<Image>().color = oldColor;
+            }
+        }*/
     }
 }
