@@ -12,6 +12,7 @@ public class SkillsSelectMenuController : MonoBehaviour {
 
     private Color32 oldColor = new Color32(0,252,255,255);
     private Color32 newColor = new Color32(255, 91, 0, 255);
+    private Color32 selectedColor = new Color32(251, 255, 0, 255);
 
 
     // Use this for initialization
@@ -20,7 +21,16 @@ public class SkillsSelectMenuController : MonoBehaviour {
         animator = GameObject.Find("SkillsMenu").GetComponent<Animator>();
         selectedSkills = new List<GameObject>();
 
-	}
+        for(int i=0; i< AllSpellsController.allSpells.Length; i++)
+        {
+            if (AllSpellsController.allSpells[i] == false)
+            {
+                GameObject.Find("Skill" + (i+1)).GetComponent<Image>().color = newColor;
+            }
+        }
+
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -71,7 +81,7 @@ public class SkillsSelectMenuController : MonoBehaviour {
             if (!selectedSkills.Contains(gameObject))
             {
                 selectedSkills.Add(gameObject);
-                gameObject.GetComponent<Image>().color = newColor;
+                gameObject.GetComponent<Image>().color = selectedColor;
 
                 if(selectedSkills.Count > 2)
                 {
