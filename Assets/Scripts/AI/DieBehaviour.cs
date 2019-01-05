@@ -10,7 +10,9 @@ public class DieBehaviour : StateMachineBehaviour
     {
         animator.SetBool("IsDying", false);
 
-        animator.GetComponent<Rigidbody2D>().drag = 0f;        
+        animator.GetComponent<Rigidbody2D>().drag = 0f;
+
+        animator.GetComponent<EnemyAI>().died = true;
 
         animator.GetComponent<EnemyAI>().DoDestroyEnemy();
     }

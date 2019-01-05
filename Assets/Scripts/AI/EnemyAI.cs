@@ -15,8 +15,7 @@ public class EnemyAI : MonoBehaviour {
     public float stoppingDistance = 0f;
     public float damage = 15f;
     public bool effected = false; // check if orc effected by any skill (ice, fire, poison)
-
-    //public bool die = false;
+    public bool died = false;
    
     [HideInInspector] public Vector2 startPosition;
     [HideInInspector] public bool facingRight = true;
@@ -36,7 +35,7 @@ public class EnemyAI : MonoBehaviour {
 
     private void Update()
     {
-        if (GameObject.FindGameObjectWithTag("Player") != null)
+        if (GameObject.FindGameObjectWithTag("Player") != null && !died)
         {
             playerPosition = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>().position;
             playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().Health;

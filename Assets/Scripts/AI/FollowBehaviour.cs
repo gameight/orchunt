@@ -16,6 +16,8 @@ public class FollowBehaviour : StateMachineBehaviour
         stoppingDistance = animator.GetComponent<EnemyAI>().stoppingDistance;
         runSpeed = animator.GetComponent<EnemyAI>().runSpeed;
         enemyHealth = animator.GetComponent<EnemyAI>().health;
+
+        //Debug.Log("Enemy Health: " + enemyHealth);
     }
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
