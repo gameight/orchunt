@@ -4,10 +4,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class LevelEnd : MonoBehaviour
 {
+    bool triggerLock = false;
+
     private void OnTriggerEnter2D(Collider2D other)
     {
-        bool triggerLock = false;
-
         GameObject bossGameObject = GameObject.Find("Boss");
 
         if (bossGameObject != null && other.CompareTag("Player") && bossGameObject.GetComponent<EnemyAI>().health <= 0 && !triggerLock)
