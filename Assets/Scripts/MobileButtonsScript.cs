@@ -9,21 +9,21 @@ public class MobileButtonsScript : MonoBehaviour {
 
     public void leftButtonClicked()
     {
-        Debug.Log("left");
+        //Debug.Log("left");
         buttonClick = true;
         PlayerMovement.horizontalMove = -40f;        
     }
 
     public void rightButtonClicked()
     {
-        Debug.Log("right");
+        //Debug.Log("right");
         buttonClick = true;
         PlayerMovement.horizontalMove = 40f;      
     }
 
     public void buttonRelease()
     {
-        Debug.Log("button release");
+        //Debug.Log("button release");
         buttonClick = false;
         PlayerMovement.horizontalMove = 0f;
     }

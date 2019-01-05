@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
+using UnityEngine.SceneManagement;
 
 public class GameMaster : MonoBehaviour
 {
@@ -45,10 +46,9 @@ public class GameMaster : MonoBehaviour
         SoundManager.PlaySound("Respawn");
         SoundManager.PlaySound("LevelBackground");
         Instantiate(playerPrefab, spawnPoint.position, spawnPoint.rotation);
-      
+        if (SceneManager.GetActiveScene().name == "Level3")
+            GameObject.FindGameObjectWithTag("Player").transform.localScale = new Vector3(1, 1, 1);
         GameObject.FindGameObjectWithTag("MainCamera").GetComponentInChildren<CinemachineVirtualCamera>().Follow = GameObject.FindGameObjectWithTag("Player").transform;
-
-       
     }
 
     

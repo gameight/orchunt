@@ -18,7 +18,8 @@ public class SkillController : MonoBehaviour
     public static bool[] activateSpellBool = { false, false };
     static bool continueBool = false;
     static bool[] right = { true, true };
-    IEnumerator enumerator = null;
+    IEnumerator enumerator1 = null;
+    IEnumerator enumerator2 = null;
 
     // Use this for initialization
     void Start()
@@ -62,14 +63,22 @@ public class SkillController : MonoBehaviour
         Debug.Log("Reseting spell: " + spellString);
         for (int a = 0; a < 2; a++)
         {
-            if (spell[a].name == spellString)
+            if (spell[a] != null && spell[a].name == spellString)
             {
                 var coll = spell[a].GetComponentInChildren<ParticleSystem>().collision;
                 coll.enabled = false;
                 spell[a].transform.SetParent(rina[0].transform);
                 activateSpellBool[a] = false;
-                if (enumerator != null)
-                    StopCoroutine(enumerator);
+                if(a == 0)
+                {
+                    if (enumerator1 != null)
+                        StopCoroutine(enumerator1);
+                }
+                else
+                {
+                    if (enumerator2 != null)
+                        StopCoroutine(enumerator2);
+                }
                 StartCoroutine(resetSpellCoroutine(a));
                 animator.SetBool("IsCasting", false);
                 break;
@@ -83,7 +92,7 @@ public class SkillController : MonoBehaviour
         animator.SetBool("IsCasting", true);
         for (int a = 0; a < 2; a++)
         {
-            if (spell[a].name == spellString)
+            if (spell[a] != null && spell[a].name == spellString)
             {
                 SoundManager.PlaySound("Skill");
                 var coll = spell[a].GetComponentInChildren<ParticleSystem>().collision;
@@ -95,8 +104,17 @@ public class SkillController : MonoBehaviour
                     spell[a].transform.position = new Vector3(rina[0].transform.position.x - 1.5f, rina[0].transform.position.y, rina[0].transform.position.z);
                 spell[a].transform.parent = null;
                 activateSpellBool[a] = true;
-                enumerator = resetSpellCoroutineWithTime(spellString);
-                StartCoroutine(enumerator);
+                if (a == 0)
+                {
+                    enumerator1 = resetSpellCoroutineWithTime(spellString);
+                    StartCoroutine(enumerator1);
+                }
+                else
+                {
+                    enumerator2 = resetSpellCoroutineWithTime(spellString);
+                    StartCoroutine(enumerator2);
+                }
+                
                 StartCoroutine(activateSpellCoroutine(a));
             }
         }
@@ -104,6 +122,7 @@ public class SkillController : MonoBehaviour
 
     IEnumerator activateSpellCoroutine(int a)
     {
+        Debug.Log("activateSpellCoroutine");
         while (activateSpellBool[a])
         {
             yield return null;
@@ -126,7 +145,8 @@ public class SkillController : MonoBehaviour
 
     IEnumerator resetSpellCoroutineWithTime(string spellString) // If spell didnt collide with anything for 3 seconds, reset the spell
     {
-        yield return new WaitForSeconds(3);
+        Debug.Log("resetSpellCoroutineWithTime:" + spellString);
+        yield return new WaitForSeconds(2);
         resetSpell(spellString);
     }
     

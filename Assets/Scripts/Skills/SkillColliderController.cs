@@ -15,6 +15,9 @@ public class SkillColliderController : MonoBehaviour
 
     private void OnParticleCollision(GameObject other)
     {
+        if (other.gameObject.name != "Backgrounds" && other.gameObject.name != "Background")
+            return;
+        Debug.Log("Collision");
         if (other.gameObject.tag == "Enemy")
         {
             Debug.Log("CollisionEnemy");
@@ -24,8 +27,11 @@ public class SkillColliderController : MonoBehaviour
             if (Effect != "" && !other.gameObject.GetComponent<EnemyAI>().effected)
                 StartCoroutine(EffectToOrc(Effect, other));
         }
-        GameObject[] rina = GameObject.FindGameObjectsWithTag("Player");
-        rina[0].GetComponent<SkillController>().resetSpell(this.transform.parent.name);
+        if (other.gameObject.tag != "Spell")
+        {
+            GameObject[] rina = GameObject.FindGameObjectsWithTag("Player");
+            rina[0].GetComponent<SkillController>().resetSpell(this.transform.parent.name);
+        }
     }
 
     void DamageAndEffect(string name)
