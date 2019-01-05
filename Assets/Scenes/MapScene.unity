@@ -329,7 +329,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e96a8bfbf1cca4abe8e3a64e3ab15306, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioMixerMaster: {fileID: 24100000, guid: cc4eb45365c28e243bc6a7fdeb90a5fb, type: 2}
   slider: {fileID: 16501702}
 --- !u!114 &65132575
 MonoBehaviour:
@@ -3085,7 +3084,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -209, y: -56}
+  m_AnchoredPosition: {x: -180, y: -56}
   m_SizeDelta: {x: 813.5, y: 161.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &992053642
