@@ -19,13 +19,13 @@ public class SaveSystem : MonoBehaviour {
 	
     public static void Save()
     {
-        PlayerPrefs.SetString("orchunt_data_1646", JsonUtility.ToJson(playerData));
+        PlayerPrefs.SetString("orchunt_data_1702", JsonUtility.ToJson(playerData));
         Debug.Log("Data Kaydedildi Level: " + playerData.level);
     }
 
     public void Load()
     {
-        string json = PlayerPrefs.GetString("orchunt_data_1646");
+        string json = PlayerPrefs.GetString("orchunt_data_1702");
 
         Debug.Log("Loaded Data: " + json);
 
