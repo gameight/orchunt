@@ -7590,11 +7590,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4936215241453832, guid: ce3b7f0e322ca854285456be6dd76e22, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 129.35
+      value: 162.56
       objectReference: {fileID: 0}
     - target: {fileID: 4936215241453832, guid: ce3b7f0e322ca854285456be6dd76e22, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.19
+      value: 3.83
       objectReference: {fileID: 0}
     - target: {fileID: 4936215241453832, guid: ce3b7f0e322ca854285456be6dd76e22, type: 2}
       propertyPath: m_LocalPosition.z
@@ -87580,11 +87580,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4364525473189350, guid: 0b25adbc49c0ad84db483380dc7765d3, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 108.0162
+      value: 135.70273
       objectReference: {fileID: 0}
     - target: {fileID: 4364525473189350, guid: 0b25adbc49c0ad84db483380dc7765d3, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -8.928753
+      value: -5.577356
       objectReference: {fileID: 0}
     - target: {fileID: 20133748639804168, guid: 0b25adbc49c0ad84db483380dc7765d3,
         type: 2}
@@ -89768,6 +89768,11 @@ Prefab:
     - target: {fileID: 1527621967113574, guid: 68df1b480add0d444b9204b797765641, type: 2}
       propertyPath: m_Name
       value: Orc1 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114197613699845462, guid: 68df1b480add0d444b9204b797765641,
+        type: 2}
+      propertyPath: perceptionDistance
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68df1b480add0d444b9204b797765641, type: 2}
