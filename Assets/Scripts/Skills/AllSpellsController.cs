@@ -32,23 +32,38 @@ public class AllSpellsController : MonoBehaviour {
         {
             case "Level1":
                 if (isSecretLevelBoss)
+                {
                     SaveSystem.playerData.earnedSpells[2] = true;
+                    SkillsSelectMenuController.updateNewSkillColour(2);
+                }
                 break;
             case "Level2":
-                if (isSecretLevelBoss)
+                if (isSecretLevelBoss) { 
                     SaveSystem.playerData.earnedSpells[3] = true;
-                else
+                    SkillsSelectMenuController.updateNewSkillColour(3);
+
+                }
+                else { 
                     SaveSystem.playerData.earnedSpells[4] = true;
+                    SkillsSelectMenuController.updateNewSkillColour(4);
+                }
                 break;
             case "Level3":
                 if (isSecretLevelBoss)
+                {
                     SaveSystem.playerData.earnedSpells[5] = true;
-                else
+                    SkillsSelectMenuController.updateNewSkillColour(5);
+                }
+                else { 
                     SaveSystem.playerData.earnedSpells[6] = true;
+                    SkillsSelectMenuController.updateNewSkillColour(6);
+                }
                 break;
             case "Level4":
-                if (isSecretLevelBoss)
+                if (isSecretLevelBoss) { 
                     SaveSystem.playerData.earnedSpells[7] = true;
+                    SkillsSelectMenuController.updateNewSkillColour(7);
+                }
                 break;
         }
 
