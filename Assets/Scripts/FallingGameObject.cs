@@ -8,7 +8,7 @@ public class FallingGameObject : MonoBehaviour
     Rigidbody2D rb;
     GameObject thisGameObj;
     Vector3 oldPos;
-    [SerializeField] float dropTime = 0.2f; //default invoke time
+    [SerializeField] float dropTime = 0.5f; //default invoke time
     [SerializeField] float recreateTime = 5f; //default recreate time
 
     void Start()

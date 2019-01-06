@@ -10,6 +10,7 @@ public class Teleporter : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Player" || collision.gameObject.name == "Rina(Clone)")
         {
+            SoundManager.PlaySound("LevelBackground");
             StartCoroutine(Teleport(collision.gameObject));
         }
         
