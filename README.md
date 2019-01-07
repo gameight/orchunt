@@ -12,3 +12,15 @@ https://www.dropbox.com/s/byscpia3y466rfi/FinalReport_bim423.docx?dl=0
 
 Trello
 https://trello.com/b/SfKuBbeU/orchunt
+
+Screen Shots
+![startscene](https://raw.githubusercontent.com/gameight/orchunt/master/screenshots/orchunt1.jpeg)
+![Mapscene](https://raw.githubusercontent.com/gameight/orchunt/master/screenshots/orchunt2.jpeg)
+![Settings](https://raw.githubusercontent.com/gameight/orchunt/master/screenshots/orchunt3.jpeg)
+![Settings](https://raw.githubusercontent.com/gameight/orchunt/master/screenshots/orchunt4.jpeg)
+![Level](https://raw.githubusercontent.com/gameight/orchunt/master/screenshots/orchunt5.jpeg)
+![Level](https://raw.githubusercontent.com/gameight/orchunt/master/screenshots/orchunt6.jpeg)
+![SkillScene](https://raw.githubusercontent.com/gameight/orchunt/master/screenshots/orchunt7.jpeg)
+
+
+
