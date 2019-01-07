@@ -8,4 +8,7 @@ Project Web Site
 https://gameight.github.io/
 
 Game Design Document
-https://docs.google.com/document/d/1dXyIRu75k97GCcxBKQA96DuOU0gtmip8GeRj4sUvzV4/edit?usp=sharing
+https://www.dropbox.com/s/byscpia3y466rfi/FinalReport_bim423.docx?dl=0
+
+Trello
+https://trello.com/b/SfKuBbeU/orchunt
