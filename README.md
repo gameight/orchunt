@@ -19,7 +19,7 @@ Screen Shots
 ![Settings](https://raw.githubusercontent.com/gameight/orchunt/master/screenshots/orchunt3.jpeg)
 ![Settings](https://raw.githubusercontent.com/gameight/orchunt/master/screenshots/orchunt4.jpeg)
 ![Level](https://raw.githubusercontent.com/gameight/orchunt/master/screenshots/orchunt5.jpeg)
-![Level](https://raw.githubusercontent.com/gameight/orchunt/master/screenshots/orchunt6.jpeg)
+![Level](https://raw.githubusercontent.com/gameight/orchunt/master/screenshots/orrchunt6.jpeg)
 ![SkillScene](https://raw.githubusercontent.com/gameight/orchunt/master/screenshots/orchunt7.jpeg)
 
 
